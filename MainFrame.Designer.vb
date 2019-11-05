@@ -35,15 +35,13 @@ Partial Class MainFrame
         Me.TransactionHistoryToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.SignOutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ProductFlowToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ProductInToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ProductOutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.AddNewTransactionToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
         'ProductToolStripMenuItem
         '
-        Me.ProductToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ProductListToolStripMenuItem, Me.AddNewProductToolStripMenuItem, Me.ProductFlowToolStripMenuItem})
+        Me.ProductToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ProductListToolStripMenuItem, Me.AddNewProductToolStripMenuItem})
         Me.ProductToolStripMenuItem.Name = "ProductToolStripMenuItem"
         Me.ProductToolStripMenuItem.Size = New System.Drawing.Size(80, 24)
         Me.ProductToolStripMenuItem.Text = "&Products"
@@ -70,13 +68,13 @@ Partial Class MainFrame
         'VendorListToolStripMenuItem
         '
         Me.VendorListToolStripMenuItem.Name = "VendorListToolStripMenuItem"
-        Me.VendorListToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
+        Me.VendorListToolStripMenuItem.Size = New System.Drawing.Size(205, 26)
         Me.VendorListToolStripMenuItem.Text = "Vendor &List"
         '
         'AddNewVendorToolStripMenuItem
         '
         Me.AddNewVendorToolStripMenuItem.Name = "AddNewVendorToolStripMenuItem"
-        Me.AddNewVendorToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
+        Me.AddNewVendorToolStripMenuItem.Size = New System.Drawing.Size(205, 26)
         Me.AddNewVendorToolStripMenuItem.Text = "Add &New Vendor"
         '
         'ClientsToolStripMenuItem
@@ -100,7 +98,7 @@ Partial Class MainFrame
         '
         'TransactionToolStripMenuItem
         '
-        Me.TransactionToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.TransactionHistoryToolStripMenuItem})
+        Me.TransactionToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.TransactionHistoryToolStripMenuItem, Me.AddNewTransactionToolStripMenuItem})
         Me.TransactionToolStripMenuItem.Name = "TransactionToolStripMenuItem"
         Me.TransactionToolStripMenuItem.Size = New System.Drawing.Size(98, 24)
         Me.TransactionToolStripMenuItem.Text = "&Transaction"
@@ -108,7 +106,7 @@ Partial Class MainFrame
         'TransactionHistoryToolStripMenuItem
         '
         Me.TransactionHistoryToolStripMenuItem.Name = "TransactionHistoryToolStripMenuItem"
-        Me.TransactionHistoryToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
+        Me.TransactionHistoryToolStripMenuItem.Size = New System.Drawing.Size(233, 26)
         Me.TransactionHistoryToolStripMenuItem.Text = "Transaction &History"
         '
         'MenuStrip1
@@ -127,24 +125,11 @@ Partial Class MainFrame
         Me.SignOutToolStripMenuItem.Size = New System.Drawing.Size(80, 24)
         Me.SignOutToolStripMenuItem.Text = "&Sign Out"
         '
-        'ProductFlowToolStripMenuItem
+        'AddNewTransactionToolStripMenuItem
         '
-        Me.ProductFlowToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ProductInToolStripMenuItem, Me.ProductOutToolStripMenuItem})
-        Me.ProductFlowToolStripMenuItem.Name = "ProductFlowToolStripMenuItem"
-        Me.ProductFlowToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
-        Me.ProductFlowToolStripMenuItem.Text = "Product &Flow"
-        '
-        'ProductInToolStripMenuItem
-        '
-        Me.ProductInToolStripMenuItem.Name = "ProductInToolStripMenuItem"
-        Me.ProductInToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
-        Me.ProductInToolStripMenuItem.Text = "Product &In"
-        '
-        'ProductOutToolStripMenuItem
-        '
-        Me.ProductOutToolStripMenuItem.Name = "ProductOutToolStripMenuItem"
-        Me.ProductOutToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
-        Me.ProductOutToolStripMenuItem.Text = "Product &Out"
+        Me.AddNewTransactionToolStripMenuItem.Name = "AddNewTransactionToolStripMenuItem"
+        Me.AddNewTransactionToolStripMenuItem.Size = New System.Drawing.Size(233, 26)
+        Me.AddNewTransactionToolStripMenuItem.Text = "Add &New Transaction"
         '
         'MainFrame
         '
@@ -176,7 +161,5 @@ Partial Class MainFrame
     Friend WithEvents SignOutToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ClientListToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents AddNewClientToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents ProductFlowToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents ProductInToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents ProductOutToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents AddNewTransactionToolStripMenuItem As ToolStripMenuItem
 End Class

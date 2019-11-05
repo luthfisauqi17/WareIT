@@ -128,6 +128,12 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="TransactionAdd.Designer.vb">
+      <DependentUpon>TransactionAdd.vb</DependentUpon>
+    </Compile>
+    <Compile Include="TransactionAdd.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="VendorAdd.Designer.vb">
       <DependentUpon>VendorAdd.vb</DependentUpon>
     </Compile>
@@ -165,6 +171,9 @@
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TransactionAdd.resx">
+      <DependentUpon>TransactionAdd.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="VendorAdd.resx">
       <DependentUpon>VendorAdd.vb</DependentUpon>

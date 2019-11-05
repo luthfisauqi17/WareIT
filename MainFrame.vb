@@ -31,4 +31,8 @@
     Private Sub AddNewClientToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AddNewClientToolStripMenuItem.Click
         ClientAdd.ShowDialog()
     End Sub
+
+    Private Sub AddNewTransactionToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AddNewTransactionToolStripMenuItem.Click
+        TransactionAdd.Show()
+    End Sub
 End Class

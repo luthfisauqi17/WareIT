@@ -21,3 +21,4 @@ C:\Users\Luthfi Syauqi\source\repos\WareIT\obj\Debug\WareIT.VendorAdd.resources
 C:\Users\Luthfi Syauqi\source\repos\WareIT\obj\Debug\WareIT.VendorList.resources
 C:\Users\Luthfi Syauqi\source\repos\WareIT\obj\Debug\WareIT.ClientAdd.resources
 C:\Users\Luthfi Syauqi\source\repos\WareIT\obj\Debug\WareIT.ClientList.resources
+C:\Users\Luthfi Syauqi\source\repos\WareIT\obj\Debug\WareIT.TransactionAdd.resources
