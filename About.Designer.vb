@@ -34,6 +34,11 @@ Partial Class About
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(About))
         Me.SplitContainer1 = New System.Windows.Forms.SplitContainer()
         Me.aboutTreeView = New System.Windows.Forms.TreeView()
+        Me.faqPanel = New System.Windows.Forms.Panel()
+        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.aboutUsPanel = New System.Windows.Forms.Panel()
         Me.GroupBox8 = New System.Windows.Forms.GroupBox()
         Me.Label23 = New System.Windows.Forms.Label()
@@ -59,21 +64,19 @@ Partial Class About
         Me.Label9 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.partnershipPanel = New System.Windows.Forms.Panel()
-        Me.PictureBox4 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.partnershipPictureBox = New System.Windows.Forms.PictureBox()
+        Me.partnershipPictureBox4 = New System.Windows.Forms.PictureBox()
+        Me.partnershipPictureBox3 = New System.Windows.Forms.PictureBox()
+        Me.partnershipPictureBox2 = New System.Windows.Forms.PictureBox()
+        Me.partnershipPictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.partnershipPictureBox0 = New System.Windows.Forms.PictureBox()
         Me.ImageList1 = New System.Windows.Forms.ImageList(Me.components)
-        Me.faqPanel = New System.Windows.Forms.Panel()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.Label4 = New System.Windows.Forms.Label()
         CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SplitContainer1.Panel1.SuspendLayout()
         Me.SplitContainer1.Panel2.SuspendLayout()
         Me.SplitContainer1.SuspendLayout()
+        Me.faqPanel.SuspendLayout()
+        Me.GroupBox1.SuspendLayout()
         Me.aboutUsPanel.SuspendLayout()
         Me.GroupBox8.SuspendLayout()
         Me.featurePanel.SuspendLayout()
@@ -83,13 +86,11 @@ Partial Class About
         Me.sendFeedbackPanel.SuspendLayout()
         Me.GroupBox5.SuspendLayout()
         Me.partnershipPanel.SuspendLayout()
-        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.partnershipPictureBox, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.faqPanel.SuspendLayout()
-        Me.GroupBox1.SuspendLayout()
+        CType(Me.partnershipPictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.partnershipPictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.partnershipPictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.partnershipPictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.partnershipPictureBox0, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'SplitContainer1
@@ -104,12 +105,12 @@ Partial Class About
         '
         'SplitContainer1.Panel2
         '
-        Me.SplitContainer1.Panel2.Controls.Add(Me.faqPanel)
         Me.SplitContainer1.Panel2.Controls.Add(Me.aboutUsPanel)
         Me.SplitContainer1.Panel2.Controls.Add(Me.featurePanel)
         Me.SplitContainer1.Panel2.Controls.Add(Me.techSupportPanel)
         Me.SplitContainer1.Panel2.Controls.Add(Me.sendFeedbackPanel)
         Me.SplitContainer1.Panel2.Controls.Add(Me.partnershipPanel)
+        Me.SplitContainer1.Panel2.Controls.Add(Me.faqPanel)
         Me.SplitContainer1.Size = New System.Drawing.Size(800, 450)
         Me.SplitContainer1.SplitterDistance = 266
         Me.SplitContainer1.TabIndex = 0
@@ -138,11 +139,60 @@ Partial Class About
         Me.aboutTreeView.Size = New System.Drawing.Size(260, 444)
         Me.aboutTreeView.TabIndex = 0
         '
+        'faqPanel
+        '
+        Me.faqPanel.Controls.Add(Me.GroupBox1)
+        Me.faqPanel.Controls.Add(Me.Label1)
+        Me.faqPanel.Location = New System.Drawing.Point(3, 12)
+        Me.faqPanel.Name = "faqPanel"
+        Me.faqPanel.Size = New System.Drawing.Size(530, 43)
+        Me.faqPanel.TabIndex = 6
+        '
+        'GroupBox1
+        '
+        Me.GroupBox1.Controls.Add(Me.Label2)
+        Me.GroupBox1.Controls.Add(Me.Label3)
+        Me.GroupBox1.Location = New System.Drawing.Point(12, 56)
+        Me.GroupBox1.Name = "GroupBox1"
+        Me.GroupBox1.Size = New System.Drawing.Size(503, 86)
+        Me.GroupBox1.TabIndex = 3
+        Me.GroupBox1.TabStop = False
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(10, 18)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(243, 20)
+        Me.Label2.TabIndex = 1
+        Me.Label2.Text = "Q: How to use this application?"
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Location = New System.Drawing.Point(10, 46)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(282, 20)
+        Me.Label3.TabIndex = 2
+        Me.Label3.Text = "A: First you can add new information"
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(217, 21)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(87, 32)
+        Me.Label1.TabIndex = 0
+        Me.Label1.Text = "FAQs"
+        '
         'aboutUsPanel
         '
         Me.aboutUsPanel.Controls.Add(Me.GroupBox8)
         Me.aboutUsPanel.Controls.Add(Me.Label22)
-        Me.aboutUsPanel.Location = New System.Drawing.Point(12, 182)
+        Me.aboutUsPanel.Location = New System.Drawing.Point(3, 63)
         Me.aboutUsPanel.Name = "aboutUsPanel"
         Me.aboutUsPanel.Size = New System.Drawing.Size(512, 43)
         Me.aboutUsPanel.TabIndex = 5
@@ -179,9 +229,9 @@ Partial Class About
         '
         Me.featurePanel.Controls.Add(Me.GroupBox7)
         Me.featurePanel.Controls.Add(Me.Label17)
-        Me.featurePanel.Location = New System.Drawing.Point(9, 217)
+        Me.featurePanel.Location = New System.Drawing.Point(6, 112)
         Me.featurePanel.Name = "featurePanel"
-        Me.featurePanel.Size = New System.Drawing.Size(521, 55)
+        Me.featurePanel.Size = New System.Drawing.Size(521, 52)
         Me.featurePanel.TabIndex = 4
         '
         'GroupBox7
@@ -250,9 +300,9 @@ Partial Class About
         '
         Me.techSupportPanel.Controls.Add(Me.GroupBox6)
         Me.techSupportPanel.Controls.Add(Me.Label11)
-        Me.techSupportPanel.Location = New System.Drawing.Point(18, 241)
+        Me.techSupportPanel.Location = New System.Drawing.Point(9, 172)
         Me.techSupportPanel.Name = "techSupportPanel"
-        Me.techSupportPanel.Size = New System.Drawing.Size(524, 100)
+        Me.techSupportPanel.Size = New System.Drawing.Size(524, 46)
         Me.techSupportPanel.TabIndex = 3
         '
         'GroupBox6
@@ -332,9 +382,9 @@ Partial Class About
         '
         Me.sendFeedbackPanel.Controls.Add(Me.GroupBox5)
         Me.sendFeedbackPanel.Controls.Add(Me.Label8)
-        Me.sendFeedbackPanel.Location = New System.Drawing.Point(29, 312)
+        Me.sendFeedbackPanel.Location = New System.Drawing.Point(9, 224)
         Me.sendFeedbackPanel.Name = "sendFeedbackPanel"
-        Me.sendFeedbackPanel.Size = New System.Drawing.Size(521, 100)
+        Me.sendFeedbackPanel.Size = New System.Drawing.Size(521, 63)
         Me.sendFeedbackPanel.TabIndex = 2
         '
         'GroupBox5
@@ -378,116 +428,81 @@ Partial Class About
         '
         'partnershipPanel
         '
-        Me.partnershipPanel.Controls.Add(Me.PictureBox4)
-        Me.partnershipPanel.Controls.Add(Me.PictureBox3)
-        Me.partnershipPanel.Controls.Add(Me.PictureBox2)
-        Me.partnershipPanel.Controls.Add(Me.PictureBox1)
-        Me.partnershipPanel.Controls.Add(Me.partnershipPictureBox)
-        Me.partnershipPanel.Location = New System.Drawing.Point(0, 402)
+        Me.partnershipPanel.Controls.Add(Me.Label4)
+        Me.partnershipPanel.Controls.Add(Me.partnershipPictureBox4)
+        Me.partnershipPanel.Controls.Add(Me.partnershipPictureBox3)
+        Me.partnershipPanel.Controls.Add(Me.partnershipPictureBox2)
+        Me.partnershipPanel.Controls.Add(Me.partnershipPictureBox1)
+        Me.partnershipPanel.Controls.Add(Me.partnershipPictureBox0)
+        Me.partnershipPanel.Location = New System.Drawing.Point(9, 304)
         Me.partnershipPanel.Name = "partnershipPanel"
-        Me.partnershipPanel.Size = New System.Drawing.Size(530, 48)
+        Me.partnershipPanel.Size = New System.Drawing.Size(518, 130)
         Me.partnershipPanel.TabIndex = 0
         '
-        'PictureBox4
+        'partnershipPictureBox4
         '
-        Me.PictureBox4.Location = New System.Drawing.Point(18, 128)
-        Me.PictureBox4.Name = "PictureBox4"
-        Me.PictureBox4.Size = New System.Drawing.Size(100, 100)
-        Me.PictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox4.TabIndex = 9
-        Me.PictureBox4.TabStop = False
+        Me.partnershipPictureBox4.Location = New System.Drawing.Point(18, 223)
+        Me.partnershipPictureBox4.Name = "partnershipPictureBox4"
+        Me.partnershipPictureBox4.Size = New System.Drawing.Size(100, 100)
+        Me.partnershipPictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.partnershipPictureBox4.TabIndex = 9
+        Me.partnershipPictureBox4.TabStop = False
         '
-        'PictureBox3
+        'partnershipPictureBox3
         '
-        Me.PictureBox3.Location = New System.Drawing.Point(397, 12)
-        Me.PictureBox3.Name = "PictureBox3"
-        Me.PictureBox3.Size = New System.Drawing.Size(100, 100)
-        Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox3.TabIndex = 8
-        Me.PictureBox3.TabStop = False
+        Me.partnershipPictureBox3.Location = New System.Drawing.Point(397, 107)
+        Me.partnershipPictureBox3.Name = "partnershipPictureBox3"
+        Me.partnershipPictureBox3.Size = New System.Drawing.Size(100, 100)
+        Me.partnershipPictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.partnershipPictureBox3.TabIndex = 8
+        Me.partnershipPictureBox3.TabStop = False
         '
-        'PictureBox2
+        'partnershipPictureBox2
         '
-        Me.PictureBox2.Location = New System.Drawing.Point(273, 12)
-        Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(100, 100)
-        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox2.TabIndex = 7
-        Me.PictureBox2.TabStop = False
+        Me.partnershipPictureBox2.Location = New System.Drawing.Point(273, 107)
+        Me.partnershipPictureBox2.Name = "partnershipPictureBox2"
+        Me.partnershipPictureBox2.Size = New System.Drawing.Size(100, 100)
+        Me.partnershipPictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.partnershipPictureBox2.TabIndex = 7
+        Me.partnershipPictureBox2.TabStop = False
         '
-        'PictureBox1
+        'partnershipPictureBox1
         '
-        Me.PictureBox1.Location = New System.Drawing.Point(149, 12)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(100, 100)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox1.TabIndex = 6
-        Me.PictureBox1.TabStop = False
+        Me.partnershipPictureBox1.Location = New System.Drawing.Point(149, 107)
+        Me.partnershipPictureBox1.Name = "partnershipPictureBox1"
+        Me.partnershipPictureBox1.Size = New System.Drawing.Size(100, 100)
+        Me.partnershipPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.partnershipPictureBox1.TabIndex = 6
+        Me.partnershipPictureBox1.TabStop = False
         '
-        'partnershipPictureBox
+        'partnershipPictureBox0
         '
-        Me.partnershipPictureBox.Location = New System.Drawing.Point(18, 12)
-        Me.partnershipPictureBox.Name = "partnershipPictureBox"
-        Me.partnershipPictureBox.Size = New System.Drawing.Size(100, 100)
-        Me.partnershipPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.partnershipPictureBox.TabIndex = 5
-        Me.partnershipPictureBox.TabStop = False
+        Me.partnershipPictureBox0.Location = New System.Drawing.Point(18, 107)
+        Me.partnershipPictureBox0.Name = "partnershipPictureBox0"
+        Me.partnershipPictureBox0.Size = New System.Drawing.Size(100, 100)
+        Me.partnershipPictureBox0.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.partnershipPictureBox0.TabIndex = 5
+        Me.partnershipPictureBox0.TabStop = False
         '
         'ImageList1
         '
         Me.ImageList1.ImageStream = CType(resources.GetObject("ImageList1.ImageStream"), System.Windows.Forms.ImageListStreamer)
         Me.ImageList1.TransparentColor = System.Drawing.Color.Transparent
-        Me.ImageList1.Images.SetKeyName(0, "member.png")
+        Me.ImageList1.Images.SetKeyName(0, "0.jpg")
+        Me.ImageList1.Images.SetKeyName(1, "0.png")
+        Me.ImageList1.Images.SetKeyName(2, "20699_20121157_3631274_db840141_image.jpg")
+        Me.ImageList1.Images.SetKeyName(3, "12009670_163602357313862_6012260228671958984_n.jpg.300x300_q85.jpg")
+        Me.ImageList1.Images.SetKeyName(4, "download.png")
         '
-        'faqPanel
+        'Label4
         '
-        Me.faqPanel.Controls.Add(Me.GroupBox1)
-        Me.faqPanel.Controls.Add(Me.Label1)
-        Me.faqPanel.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.faqPanel.Location = New System.Drawing.Point(0, 0)
-        Me.faqPanel.Name = "faqPanel"
-        Me.faqPanel.Size = New System.Drawing.Size(530, 450)
-        Me.faqPanel.TabIndex = 6
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(217, 21)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(87, 32)
-        Me.Label1.TabIndex = 0
-        Me.Label1.Text = "FAQs"
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(10, 18)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(243, 20)
-        Me.Label2.TabIndex = 1
-        Me.Label2.Text = "Q: How to use this application?"
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(10, 46)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(282, 20)
-        Me.Label3.TabIndex = 2
-        Me.Label3.Text = "A: First you can add new information"
-        '
-        'GroupBox1
-        '
-        Me.GroupBox1.Controls.Add(Me.Label2)
-        Me.GroupBox1.Controls.Add(Me.Label3)
-        Me.GroupBox1.Location = New System.Drawing.Point(12, 56)
-        Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(503, 86)
-        Me.GroupBox1.TabIndex = 3
-        Me.GroupBox1.TabStop = False
+        Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.Location = New System.Drawing.Point(188, 32)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(161, 32)
+        Me.Label4.TabIndex = 10
+        Me.Label4.Text = "Partnership"
         '
         'About
         '
@@ -501,6 +516,10 @@ Partial Class About
         Me.SplitContainer1.Panel2.ResumeLayout(False)
         CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.SplitContainer1.ResumeLayout(False)
+        Me.faqPanel.ResumeLayout(False)
+        Me.faqPanel.PerformLayout()
+        Me.GroupBox1.ResumeLayout(False)
+        Me.GroupBox1.PerformLayout()
         Me.aboutUsPanel.ResumeLayout(False)
         Me.aboutUsPanel.PerformLayout()
         Me.GroupBox8.ResumeLayout(False)
@@ -517,15 +536,12 @@ Partial Class About
         Me.GroupBox5.ResumeLayout(False)
         Me.GroupBox5.PerformLayout()
         Me.partnershipPanel.ResumeLayout(False)
-        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.partnershipPictureBox, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.faqPanel.ResumeLayout(False)
-        Me.faqPanel.PerformLayout()
-        Me.GroupBox1.ResumeLayout(False)
-        Me.GroupBox1.PerformLayout()
+        Me.partnershipPanel.PerformLayout()
+        CType(Me.partnershipPictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.partnershipPictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.partnershipPictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.partnershipPictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.partnershipPictureBox0, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -534,16 +550,16 @@ Partial Class About
     Friend WithEvents aboutTreeView As TreeView
     Friend WithEvents partnershipPanel As Panel
     Friend WithEvents ImageList1 As ImageList
-    Friend WithEvents partnershipPictureBox As PictureBox
+    Friend WithEvents partnershipPictureBox0 As PictureBox
     Friend WithEvents sendFeedbackPanel As Panel
     Friend WithEvents GroupBox5 As GroupBox
     Friend WithEvents Label10 As Label
     Friend WithEvents Label9 As Label
     Friend WithEvents Label8 As Label
-    Friend WithEvents PictureBox4 As PictureBox
-    Friend WithEvents PictureBox3 As PictureBox
-    Friend WithEvents PictureBox2 As PictureBox
-    Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents partnershipPictureBox4 As PictureBox
+    Friend WithEvents partnershipPictureBox3 As PictureBox
+    Friend WithEvents partnershipPictureBox2 As PictureBox
+    Friend WithEvents partnershipPictureBox1 As PictureBox
     Friend WithEvents techSupportPanel As Panel
     Friend WithEvents aboutUsPanel As Panel
     Friend WithEvents GroupBox8 As GroupBox
@@ -568,4 +584,5 @@ Partial Class About
     Friend WithEvents Label2 As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents Label1 As Label
+    Friend WithEvents Label4 As Label
 End Class

@@ -22,6 +22,9 @@ Partial Class TransactionList
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim ChartArea1 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
+        Dim Legend1 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
+        Dim Series1 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
         Me.StatusStrip1 = New System.Windows.Forms.StatusStrip()
@@ -43,12 +46,15 @@ Partial Class TransactionList
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
+        Me.Chart1 = New System.Windows.Forms.DataVisualization.Charting.Chart()
         Me.Splitter1 = New System.Windows.Forms.Splitter()
+        Me.loadChartBtn = New System.Windows.Forms.Button()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.StatusStrip1.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         Me.TabPage2.SuspendLayout()
+        CType(Me.Chart1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'TabControl1
@@ -198,6 +204,8 @@ Partial Class TransactionList
         '
         'TabPage2
         '
+        Me.TabPage2.Controls.Add(Me.loadChartBtn)
+        Me.TabPage2.Controls.Add(Me.Chart1)
         Me.TabPage2.Controls.Add(Me.Splitter1)
         Me.TabPage2.Location = New System.Drawing.Point(4, 25)
         Me.TabPage2.Name = "TabPage2"
@@ -207,6 +215,21 @@ Partial Class TransactionList
         Me.TabPage2.Text = "Statistics"
         Me.TabPage2.UseVisualStyleBackColor = True
         '
+        'Chart1
+        '
+        ChartArea1.Name = "ChartArea1"
+        Me.Chart1.ChartAreas.Add(ChartArea1)
+        Legend1.Name = "Legend1"
+        Me.Chart1.Legends.Add(Legend1)
+        Me.Chart1.Location = New System.Drawing.Point(385, 6)
+        Me.Chart1.Name = "Chart1"
+        Series1.ChartArea = "ChartArea1"
+        Series1.Legend = "Legend1"
+        Series1.Name = "PRODUCT_VS_SOLD"
+        Me.Chart1.Series.Add(Series1)
+        Me.Chart1.Size = New System.Drawing.Size(718, 577)
+        Me.Chart1.TabIndex = 1
+        '
         'Splitter1
         '
         Me.Splitter1.Location = New System.Drawing.Point(3, 3)
@@ -214,6 +237,16 @@ Partial Class TransactionList
         Me.Splitter1.Size = New System.Drawing.Size(376, 583)
         Me.Splitter1.TabIndex = 0
         Me.Splitter1.TabStop = False
+        '
+        'loadChartBtn
+        '
+        Me.loadChartBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.loadChartBtn.Location = New System.Drawing.Point(29, 39)
+        Me.loadChartBtn.Name = "loadChartBtn"
+        Me.loadChartBtn.Size = New System.Drawing.Size(320, 65)
+        Me.loadChartBtn.TabIndex = 2
+        Me.loadChartBtn.Text = "Load Chart"
+        Me.loadChartBtn.UseVisualStyleBackColor = True
         '
         'TransactionList
         '
@@ -231,6 +264,7 @@ Partial Class TransactionList
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         Me.TabPage2.ResumeLayout(False)
+        CType(Me.Chart1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -257,4 +291,6 @@ Partial Class TransactionList
     Friend WithEvents ColumnHeader7 As ColumnHeader
     Friend WithEvents ColumnHeader8 As ColumnHeader
     Friend WithEvents ColumnHeader9 As ColumnHeader
+    Friend WithEvents Chart1 As DataVisualization.Charting.Chart
+    Friend WithEvents loadChartBtn As Button
 End Class

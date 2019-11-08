@@ -27,10 +27,6 @@ Partial Class ProductList
         Me.ProductListDataGridView = New System.Windows.Forms.DataGridView()
         Me.refreshProductListBtn = New System.Windows.Forms.Button()
         Me.loadProductListBtn = New System.Windows.Forms.Button()
-        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.Label1 = New System.Windows.Forms.Label()
         Me.toAddNewProductBtn = New System.Windows.Forms.Button()
         Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
         Me.NewToolStripButton = New System.Windows.Forms.ToolStripButton()
@@ -46,26 +42,36 @@ Partial Class ProductList
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
         Me.StatusStrip1 = New System.Windows.Forms.StatusStrip()
         Me.ToolStripProgressBar1 = New System.Windows.Forms.ToolStripProgressBar()
+        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.deleteProductBtn = New System.Windows.Forms.Button()
+        Me.updateProductName = New System.Windows.Forms.TextBox()
+        Me.updateProductId = New System.Windows.Forms.TextBox()
+        Me.updateProductQty = New System.Windows.Forms.NumericUpDown()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.updateBtn = New System.Windows.Forms.Button()
         CType(Me.ProductListDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.GroupBox1.SuspendLayout()
         Me.ToolStrip1.SuspendLayout()
         Me.StatusStrip1.SuspendLayout()
+        Me.GroupBox1.SuspendLayout()
+        CType(Me.updateProductQty, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'ProductListDataGridView
         '
         Me.ProductListDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.ProductListDataGridView.Location = New System.Drawing.Point(12, 130)
+        Me.ProductListDataGridView.Location = New System.Drawing.Point(311, 95)
         Me.ProductListDataGridView.Name = "ProductListDataGridView"
         Me.ProductListDataGridView.ReadOnly = True
         Me.ProductListDataGridView.RowHeadersWidth = 51
         Me.ProductListDataGridView.RowTemplate.Height = 24
-        Me.ProductListDataGridView.Size = New System.Drawing.Size(1118, 479)
+        Me.ProductListDataGridView.Size = New System.Drawing.Size(819, 514)
         Me.ProductListDataGridView.TabIndex = 1
         '
         'refreshProductListBtn
         '
-        Me.refreshProductListBtn.Location = New System.Drawing.Point(647, 80)
+        Me.refreshProductListBtn.Location = New System.Drawing.Point(145, 30)
         Me.refreshProductListBtn.Name = "refreshProductListBtn"
         Me.refreshProductListBtn.Size = New System.Drawing.Size(127, 44)
         Me.refreshProductListBtn.TabIndex = 2
@@ -74,49 +80,12 @@ Partial Class ProductList
         '
         'loadProductListBtn
         '
-        Me.loadProductListBtn.Location = New System.Drawing.Point(647, 30)
+        Me.loadProductListBtn.Location = New System.Drawing.Point(12, 30)
         Me.loadProductListBtn.Name = "loadProductListBtn"
         Me.loadProductListBtn.Size = New System.Drawing.Size(127, 44)
         Me.loadProductListBtn.TabIndex = 3
         Me.loadProductListBtn.Text = "Load Table"
         Me.loadProductListBtn.UseVisualStyleBackColor = True
-        '
-        'GroupBox1
-        '
-        Me.GroupBox1.Controls.Add(Me.Button1)
-        Me.GroupBox1.Controls.Add(Me.TextBox1)
-        Me.GroupBox1.Controls.Add(Me.Label1)
-        Me.GroupBox1.Location = New System.Drawing.Point(12, 30)
-        Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(629, 94)
-        Me.GroupBox1.TabIndex = 4
-        Me.GroupBox1.TabStop = False
-        Me.GroupBox1.Text = "Search"
-        '
-        'Button1
-        '
-        Me.Button1.Location = New System.Drawing.Point(339, 20)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(123, 46)
-        Me.Button1.TabIndex = 2
-        Me.Button1.Text = "Search"
-        Me.Button1.UseVisualStyleBackColor = True
-        '
-        'TextBox1
-        '
-        Me.TextBox1.Location = New System.Drawing.Point(90, 22)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(242, 22)
-        Me.TextBox1.TabIndex = 1
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(7, 22)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(76, 17)
-        Me.Label1.TabIndex = 0
-        Me.Label1.Text = "Product Id:"
         '
         'toAddNewProductBtn
         '
@@ -236,15 +205,102 @@ Partial Class ProductList
         Me.ToolStripProgressBar1.Size = New System.Drawing.Size(100, 16)
         Me.ToolStripProgressBar1.Step = 100
         '
+        'GroupBox1
+        '
+        Me.GroupBox1.Controls.Add(Me.deleteProductBtn)
+        Me.GroupBox1.Controls.Add(Me.updateProductName)
+        Me.GroupBox1.Controls.Add(Me.updateProductId)
+        Me.GroupBox1.Controls.Add(Me.updateProductQty)
+        Me.GroupBox1.Controls.Add(Me.Label3)
+        Me.GroupBox1.Controls.Add(Me.Label2)
+        Me.GroupBox1.Controls.Add(Me.Label1)
+        Me.GroupBox1.Controls.Add(Me.updateBtn)
+        Me.GroupBox1.Location = New System.Drawing.Point(12, 95)
+        Me.GroupBox1.Name = "GroupBox1"
+        Me.GroupBox1.Size = New System.Drawing.Size(293, 514)
+        Me.GroupBox1.TabIndex = 8
+        Me.GroupBox1.TabStop = False
+        '
+        'deleteProductBtn
+        '
+        Me.deleteProductBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.deleteProductBtn.Location = New System.Drawing.Point(12, 444)
+        Me.deleteProductBtn.Name = "deleteProductBtn"
+        Me.deleteProductBtn.Size = New System.Drawing.Size(281, 64)
+        Me.deleteProductBtn.TabIndex = 7
+        Me.deleteProductBtn.Text = "Delete Data"
+        Me.deleteProductBtn.UseVisualStyleBackColor = True
+        '
+        'updateProductName
+        '
+        Me.updateProductName.Location = New System.Drawing.Point(153, 86)
+        Me.updateProductName.Name = "updateProductName"
+        Me.updateProductName.Size = New System.Drawing.Size(100, 22)
+        Me.updateProductName.TabIndex = 6
+        '
+        'updateProductId
+        '
+        Me.updateProductId.Location = New System.Drawing.Point(153, 31)
+        Me.updateProductId.Name = "updateProductId"
+        Me.updateProductId.Size = New System.Drawing.Size(100, 22)
+        Me.updateProductId.TabIndex = 5
+        '
+        'updateProductQty
+        '
+        Me.updateProductQty.Location = New System.Drawing.Point(153, 159)
+        Me.updateProductQty.Name = "updateProductQty"
+        Me.updateProductQty.Size = New System.Drawing.Size(120, 22)
+        Me.updateProductQty.TabIndex = 4
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Location = New System.Drawing.Point(7, 159)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(139, 20)
+        Me.Label3.TabIndex = 3
+        Me.Label3.Text = "Product Quantity:"
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(7, 88)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(121, 20)
+        Me.Label2.TabIndex = 2
+        Me.Label2.Text = "Product Name:"
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(7, 31)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(90, 20)
+        Me.Label1.TabIndex = 1
+        Me.Label1.Text = "Product Id:"
+        '
+        'updateBtn
+        '
+        Me.updateBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.updateBtn.Location = New System.Drawing.Point(11, 374)
+        Me.updateBtn.Name = "updateBtn"
+        Me.updateBtn.Size = New System.Drawing.Size(281, 64)
+        Me.updateBtn.TabIndex = 0
+        Me.updateBtn.Text = "Update Data"
+        Me.updateBtn.UseVisualStyleBackColor = True
+        '
         'ProductList
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1142, 643)
+        Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.StatusStrip1)
         Me.Controls.Add(Me.ToolStrip1)
         Me.Controls.Add(Me.toAddNewProductBtn)
-        Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.loadProductListBtn)
         Me.Controls.Add(Me.refreshProductListBtn)
         Me.Controls.Add(Me.ProductListDataGridView)
@@ -252,12 +308,13 @@ Partial Class ProductList
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
         Me.Text = "ProductList"
         CType(Me.ProductListDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.GroupBox1.ResumeLayout(False)
-        Me.GroupBox1.PerformLayout()
         Me.ToolStrip1.ResumeLayout(False)
         Me.ToolStrip1.PerformLayout()
         Me.StatusStrip1.ResumeLayout(False)
         Me.StatusStrip1.PerformLayout()
+        Me.GroupBox1.ResumeLayout(False)
+        Me.GroupBox1.PerformLayout()
+        CType(Me.updateProductQty, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -266,11 +323,7 @@ Partial Class ProductList
     Friend WithEvents ProductListDataGridView As DataGridView
     Friend WithEvents refreshProductListBtn As Button
     Friend WithEvents loadProductListBtn As Button
-    Friend WithEvents GroupBox1 As GroupBox
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents Label1 As Label
     Friend WithEvents toAddNewProductBtn As Button
-    Friend WithEvents Button1 As Button
     Friend WithEvents ToolStrip1 As ToolStrip
     Friend WithEvents NewToolStripButton As ToolStripButton
     Friend WithEvents OpenToolStripButton As ToolStripButton
@@ -285,4 +338,13 @@ Partial Class ProductList
     Friend WithEvents ToolTip1 As ToolTip
     Friend WithEvents StatusStrip1 As StatusStrip
     Friend WithEvents ToolStripProgressBar1 As ToolStripProgressBar
+    Friend WithEvents GroupBox1 As GroupBox
+    Friend WithEvents updateProductName As TextBox
+    Friend WithEvents updateProductId As TextBox
+    Friend WithEvents updateProductQty As NumericUpDown
+    Friend WithEvents Label3 As Label
+    Friend WithEvents Label2 As Label
+    Friend WithEvents Label1 As Label
+    Friend WithEvents updateBtn As Button
+    Friend WithEvents deleteProductBtn As Button
 End Class

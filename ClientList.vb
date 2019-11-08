@@ -74,4 +74,44 @@ Public Class ClientList
         load_table()
         progress_bar()
     End Sub
+
+    Private Sub UpdateBtn_Click(sender As Object, e As EventArgs) Handles updateBtn.Click
+        MysqlConn = New MySqlConnection
+        MysqlConn.ConnectionString = "server=localhost; userid=root; password=''; database=wareit"
+        Dim READER As MySqlDataReader
+        Try
+            MysqlConn.Open()
+            Dim Query As String
+            Query = "UPDATE wareit.clients SET client_name = '" & updateClientName.Text & "' WHERE client_no = '" & updateClientId.Text & "'"
+            COMMAND = New MySqlCommand(Query, MysqlConn)
+            READER = COMMAND.ExecuteReader
+
+            MessageBox.Show("Data Updated")
+            MysqlConn.Close()
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        Finally
+            MysqlConn.Dispose()
+        End Try
+    End Sub
+
+    Private Sub DeleteBtn_Click(sender As Object, e As EventArgs) Handles deleteBtn.Click
+        MysqlConn = New MySqlConnection
+        MysqlConn.ConnectionString = "server=localhost; userid=root; password=''; database=wareit"
+        Dim READER As MySqlDataReader
+        Try
+            MysqlConn.Open()
+            Dim Query As String
+            Query = "DELETE FROM clients WHERE client_no = '" & updateClientId.Text & "'"
+            COMMAND = New MySqlCommand(Query, MysqlConn)
+            READER = COMMAND.ExecuteReader
+
+            MessageBox.Show("Data Deleted")
+            MysqlConn.Close()
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        Finally
+            MysqlConn.Dispose()
+        End Try
+    End Sub
 End Class

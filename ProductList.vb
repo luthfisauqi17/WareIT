@@ -4,6 +4,8 @@ Public Class ProductList
     Dim MysqlConn As MySqlConnection
     Dim COMMAND As MySqlCommand
 
+
+
     Private Sub load_table()
         MysqlConn = New MySqlConnection
         MysqlConn.ConnectionString = "server=localhost; userid=root; password=''; database=wareit"
@@ -74,4 +76,43 @@ Public Class ProductList
         load_table()
     End Sub
 
+    Private Sub UpdateBtn_Click(sender As Object, e As EventArgs) Handles updateBtn.Click
+        MysqlConn = New MySqlConnection
+        MysqlConn.ConnectionString = "server=localhost; userid=root; password=''; database=wareit"
+        Dim READER As MySqlDataReader
+        Try
+            MysqlConn.Open()
+            Dim Query As String
+            Query = "UPDATE wareit.products SET product_name = '" & updateProductName.Text & "', product_in_hand = '" & updateProductQty.Text & "' WHERE product_id = '" & updateProductId.Text & "'"
+            COMMAND = New MySqlCommand(Query, MysqlConn)
+            READER = COMMAND.ExecuteReader
+
+            MessageBox.Show("Data Updated")
+            MysqlConn.Close()
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        Finally
+            MysqlConn.Dispose()
+        End Try
+    End Sub
+
+    Private Sub DeleteProductBtn_Click(sender As Object, e As EventArgs) Handles deleteProductBtn.Click
+        MysqlConn = New MySqlConnection
+        MysqlConn.ConnectionString = "server=localhost; userid=root; password=''; database=wareit"
+        Dim READER As MySqlDataReader
+        Try
+            MysqlConn.Open()
+            Dim Query As String
+            Query = "DELETE FROM products WHERE product_id = '" & updateProductId.Text & "'"
+            COMMAND = New MySqlCommand(Query, MysqlConn)
+            READER = COMMAND.ExecuteReader
+
+            MessageBox.Show("Data Deleted")
+            MysqlConn.Close()
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        Finally
+            MysqlConn.Dispose()
+        End Try
+    End Sub
 End Class

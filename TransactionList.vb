@@ -44,4 +44,24 @@ Public Class TransactionList
 
         End Try
     End Sub
+
+    Private Sub LoadChartBtn_Click(sender As Object, e As EventArgs) Handles loadChartBtn.Click
+        MysqlConn = New MySqlConnection
+        MysqlConn.ConnectionString = "server=localhost; userid=root; password=''; database=wareit"
+        Dim READER As MySqlDataReader
+        Try
+            MysqlConn.Open()
+            Dim Query As String
+            Query = "SELECT * FROM wareit.products"
+            COMMAND = New MySqlCommand(Query, MysqlConn)
+            READER = COMMAND.ExecuteReader
+            While READER.Read
+                Chart1.Series("PRODUCT_VS_SOLD").Points.AddXY(READER.GetString("product_name"), READER.GetInt16("product_sold"))
+            End While
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        Finally
+            MysqlConn.Dispose()
+        End Try
+    End Sub
 End Class

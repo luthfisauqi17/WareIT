@@ -1,6 +1,10 @@
 ﻿Public Class About
     Private Sub About_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        partnershipPictureBox.Image = ImageList1.Images(0)
+        partnershipPictureBox0.Image = ImageList1.Images(0)
+        partnershipPictureBox1.Image = ImageList1.Images(1)
+        partnershipPictureBox2.Image = ImageList1.Images(2)
+        partnershipPictureBox3.Image = ImageList1.Images(3)
+        partnershipPictureBox4.Image = ImageList1.Images(4)
         aboutUsPanel.Dock = DockStyle.Fill
         featurePanel.Dock = DockStyle.Fill
         sendFeedbackPanel.Dock = DockStyle.Fill
