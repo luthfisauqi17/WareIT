@@ -77,6 +77,12 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="About.Designer.vb">
+      <DependentUpon>About.vb</DependentUpon>
+    </Compile>
+    <Compile Include="About.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="ClientAdd.Designer.vb">
       <DependentUpon>ClientAdd.vb</DependentUpon>
     </Compile>
@@ -134,6 +140,12 @@
     <Compile Include="TransactionAdd.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="TransactionList.Designer.vb">
+      <DependentUpon>TransactionList.vb</DependentUpon>
+    </Compile>
+    <Compile Include="TransactionList.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="VendorAdd.Designer.vb">
       <DependentUpon>VendorAdd.vb</DependentUpon>
     </Compile>
@@ -148,6 +160,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="About.resx">
+      <DependentUpon>About.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ClientAdd.resx">
       <DependentUpon>ClientAdd.vb</DependentUpon>
     </EmbeddedResource>
@@ -174,6 +189,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="TransactionAdd.resx">
       <DependentUpon>TransactionAdd.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TransactionList.resx">
+      <DependentUpon>TransactionList.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="VendorAdd.resx">
       <DependentUpon>VendorAdd.vb</DependentUpon>

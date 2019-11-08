@@ -32,6 +32,10 @@ Public Class VendorList
         End Try
     End Sub
 
+    Private Sub progress_bar()
+        ToolStripProgressBar1.PerformStep()
+    End Sub
+
     Private Sub LoadVendorListBtn_Click(sender As Object, e As EventArgs) Handles loadVendorListBtn.Click
         MysqlConn = New MySqlConnection
         MysqlConn.ConnectionString = "server=localhost; userid=root; password=''; database=wareit"
@@ -57,6 +61,7 @@ Public Class VendorList
 
         Finally
             MysqlConn.Dispose()
+            progress_bar()
 
         End Try
     End Sub

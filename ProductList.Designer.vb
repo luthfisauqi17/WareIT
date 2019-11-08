@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class ProductList
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,17 +20,18 @@ Partial Class ProductList
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ProductList))
         Me.ProductListDataGridView = New System.Windows.Forms.DataGridView()
         Me.refreshProductListBtn = New System.Windows.Forms.Button()
         Me.loadProductListBtn = New System.Windows.Forms.Button()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.toAddNewProductBtn = New System.Windows.Forms.Button()
-        Me.Button1 = New System.Windows.Forms.Button()
         Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
         Me.NewToolStripButton = New System.Windows.Forms.ToolStripButton()
         Me.OpenToolStripButton = New System.Windows.Forms.ToolStripButton()
@@ -42,9 +43,13 @@ Partial Class ProductList
         Me.PasteToolStripButton = New System.Windows.Forms.ToolStripButton()
         Me.toolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
         Me.HelpToolStripButton = New System.Windows.Forms.ToolStripButton()
+        Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
+        Me.StatusStrip1 = New System.Windows.Forms.StatusStrip()
+        Me.ToolStripProgressBar1 = New System.Windows.Forms.ToolStripProgressBar()
         CType(Me.ProductListDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
         Me.ToolStrip1.SuspendLayout()
+        Me.StatusStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
         'ProductListDataGridView
@@ -55,7 +60,7 @@ Partial Class ProductList
         Me.ProductListDataGridView.ReadOnly = True
         Me.ProductListDataGridView.RowHeadersWidth = 51
         Me.ProductListDataGridView.RowTemplate.Height = 24
-        Me.ProductListDataGridView.Size = New System.Drawing.Size(1118, 501)
+        Me.ProductListDataGridView.Size = New System.Drawing.Size(1118, 479)
         Me.ProductListDataGridView.TabIndex = 1
         '
         'refreshProductListBtn
@@ -88,6 +93,15 @@ Partial Class ProductList
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Search"
         '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(339, 20)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(123, 46)
+        Me.Button1.TabIndex = 2
+        Me.Button1.Text = "Search"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
         'TextBox1
         '
         Me.TextBox1.Location = New System.Drawing.Point(90, 22)
@@ -111,16 +125,8 @@ Partial Class ProductList
         Me.toAddNewProductBtn.Size = New System.Drawing.Size(127, 44)
         Me.toAddNewProductBtn.TabIndex = 5
         Me.toAddNewProductBtn.Text = "Add New Product"
+        Me.ToolTip1.SetToolTip(Me.toAddNewProductBtn, "Add New Product")
         Me.toAddNewProductBtn.UseVisualStyleBackColor = True
-        '
-        'Button1
-        '
-        Me.Button1.Location = New System.Drawing.Point(339, 20)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(123, 46)
-        Me.Button1.TabIndex = 2
-        Me.Button1.Text = "Search"
-        Me.Button1.UseVisualStyleBackColor = True
         '
         'ToolStrip1
         '
@@ -214,11 +220,28 @@ Partial Class ProductList
         Me.HelpToolStripButton.Size = New System.Drawing.Size(29, 24)
         Me.HelpToolStripButton.Text = "He&lp"
         '
+        'StatusStrip1
+        '
+        Me.StatusStrip1.ImageScalingSize = New System.Drawing.Size(20, 20)
+        Me.StatusStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripProgressBar1})
+        Me.StatusStrip1.Location = New System.Drawing.Point(0, 619)
+        Me.StatusStrip1.Name = "StatusStrip1"
+        Me.StatusStrip1.Size = New System.Drawing.Size(1142, 24)
+        Me.StatusStrip1.TabIndex = 7
+        Me.StatusStrip1.Text = "StatusStrip1"
+        '
+        'ToolStripProgressBar1
+        '
+        Me.ToolStripProgressBar1.Name = "ToolStripProgressBar1"
+        Me.ToolStripProgressBar1.Size = New System.Drawing.Size(100, 16)
+        Me.ToolStripProgressBar1.Step = 100
+        '
         'ProductList
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1142, 643)
+        Me.Controls.Add(Me.StatusStrip1)
         Me.Controls.Add(Me.ToolStrip1)
         Me.Controls.Add(Me.toAddNewProductBtn)
         Me.Controls.Add(Me.GroupBox1)
@@ -233,6 +256,8 @@ Partial Class ProductList
         Me.GroupBox1.PerformLayout()
         Me.ToolStrip1.ResumeLayout(False)
         Me.ToolStrip1.PerformLayout()
+        Me.StatusStrip1.ResumeLayout(False)
+        Me.StatusStrip1.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -257,4 +282,7 @@ Partial Class ProductList
     Friend WithEvents PasteToolStripButton As ToolStripButton
     Friend WithEvents toolStripSeparator1 As ToolStripSeparator
     Friend WithEvents HelpToolStripButton As ToolStripButton
+    Friend WithEvents ToolTip1 As ToolTip
+    Friend WithEvents StatusStrip1 As StatusStrip
+    Friend WithEvents ToolStripProgressBar1 As ToolStripProgressBar
 End Class

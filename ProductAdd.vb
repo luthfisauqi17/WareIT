@@ -32,10 +32,12 @@ Public Class ProductAdd
         Finally
             MySqlConn.Dispose()
 
-        End Try
+            End Try
+
     End Sub
 
     Private Sub ProductAdd_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
         MySqlConn = New MySqlConnection
         MySqlConn.ConnectionString = "server=localhost; userid=root; password=''; database=wareit"
         Dim READER As MySqlDataReader
@@ -61,4 +63,5 @@ Public Class ProductAdd
 
         End Try
     End Sub
+
 End Class

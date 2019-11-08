@@ -22,6 +22,7 @@ Partial Class ClientList
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ClientList))
         Me.HelpToolStripButton = New System.Windows.Forms.ToolStripButton()
         Me.PasteToolStripButton = New System.Windows.Forms.ToolStripButton()
@@ -42,9 +43,13 @@ Partial Class ClientList
         Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
         Me.toAddNewClientBtn = New System.Windows.Forms.Button()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.StatusStrip1 = New System.Windows.Forms.StatusStrip()
+        Me.ToolStripProgressBar1 = New System.Windows.Forms.ToolStripProgressBar()
+        Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         CType(Me.VendorListDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.ToolStrip1.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
+        Me.StatusStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
         'HelpToolStripButton
@@ -155,7 +160,7 @@ Partial Class ClientList
         Me.VendorListDataGridView.ReadOnly = True
         Me.VendorListDataGridView.RowHeadersWidth = 51
         Me.VendorListDataGridView.RowTemplate.Height = 24
-        Me.VendorListDataGridView.Size = New System.Drawing.Size(1118, 501)
+        Me.VendorListDataGridView.Size = New System.Drawing.Size(1118, 462)
         Me.VendorListDataGridView.TabIndex = 12
         '
         'Button1
@@ -214,11 +219,28 @@ Partial Class ClientList
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Search"
         '
+        'StatusStrip1
+        '
+        Me.StatusStrip1.ImageScalingSize = New System.Drawing.Size(20, 20)
+        Me.StatusStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripProgressBar1})
+        Me.StatusStrip1.Location = New System.Drawing.Point(0, 619)
+        Me.StatusStrip1.Name = "StatusStrip1"
+        Me.StatusStrip1.Size = New System.Drawing.Size(1142, 24)
+        Me.StatusStrip1.TabIndex = 18
+        Me.StatusStrip1.Text = "StatusStrip1"
+        '
+        'ToolStripProgressBar1
+        '
+        Me.ToolStripProgressBar1.Name = "ToolStripProgressBar1"
+        Me.ToolStripProgressBar1.Size = New System.Drawing.Size(100, 16)
+        Me.ToolStripProgressBar1.Step = 100
+        '
         'ClientList
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1142, 643)
+        Me.Controls.Add(Me.StatusStrip1)
         Me.Controls.Add(Me.loadClientListBtn)
         Me.Controls.Add(Me.refreshClientListBtn)
         Me.Controls.Add(Me.VendorListDataGridView)
@@ -232,6 +254,8 @@ Partial Class ClientList
         Me.ToolStrip1.PerformLayout()
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
+        Me.StatusStrip1.ResumeLayout(False)
+        Me.StatusStrip1.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -256,4 +280,7 @@ Partial Class ClientList
     Friend WithEvents ToolStrip1 As ToolStrip
     Friend WithEvents toAddNewClientBtn As Button
     Friend WithEvents GroupBox1 As GroupBox
+    Friend WithEvents StatusStrip1 As StatusStrip
+    Friend WithEvents ToolStripProgressBar1 As ToolStripProgressBar
+    Friend WithEvents Timer1 As Timer
 End Class

@@ -31,6 +31,10 @@ Public Class ClientList
         End Try
     End Sub
 
+    Private Sub progress_bar()
+        ToolStripProgressBar1.PerformStep()
+    End Sub
+
 
     Private Sub ToAddNewClientBtn_Click(sender As Object, e As EventArgs) Handles toAddNewClientBtn.Click
         ClientAdd.ShowDialog()
@@ -61,11 +65,13 @@ Public Class ClientList
 
         Finally
             MysqlConn.Dispose()
+            progress_bar()
 
         End Try
     End Sub
 
     Private Sub RefreshClientListBtn_Click(sender As Object, e As EventArgs) Handles refreshClientListBtn.Click
         load_table()
+        progress_bar()
     End Sub
 End Class

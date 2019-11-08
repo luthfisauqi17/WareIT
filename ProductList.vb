@@ -33,6 +33,10 @@ Public Class ProductList
         End Try
     End Sub
 
+    Private Sub progress_bar()
+        ToolStripProgressBar1.PerformStep()
+    End Sub
+
     Private Sub LoadProductListBtn_Click(sender As Object, e As EventArgs) Handles loadProductListBtn.Click
         MysqlConn = New MySqlConnection
         MysqlConn.ConnectionString = "server=localhost; userid=root; password=''; database=wareit"
@@ -57,6 +61,7 @@ Public Class ProductList
 
         Finally
             MysqlConn.Dispose()
+            progress_bar()
 
         End Try
     End Sub
@@ -68,4 +73,5 @@ Public Class ProductList
     Private Sub RefreshProductListBtn_Click(sender As Object, e As EventArgs) Handles refreshProductListBtn.Click
         load_table()
     End Sub
+
 End Class
