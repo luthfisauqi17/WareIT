@@ -38,13 +38,18 @@ Public Class Login
             End While
 
             If counter = 1 Then
-                MessageBox.Show("Welcome " + usernameTextBox.Text)
-                MainFrame.Show()
-                Me.Hide()
+                If validateVscrollPass(vscrollAmount.Text) Then
+                    MessageBox.Show("Welcome " + usernameTextBox.Text)
+                    MainFrame.Show()
+                    Me.Hide()
+                Else
+                    MessageBox.Show("Sorry, Wrong Vscroll Auth Password!")
+                End If
+
             ElseIf counter > 1 Then
-                MessageBox.Show("User duplicated")
-            Else
-                MessageBox.Show("Username and password are incorrect")
+                    MessageBox.Show("User duplicated")
+                Else
+                    MessageBox.Show("Username and password are incorrect")
             End If
             MysqlConn.Close()
 
@@ -56,4 +61,17 @@ Public Class Login
 
         End Try
     End Sub
+
+    Private Sub VscrollPass_Scroll(sender As Object, e As ScrollEventArgs) Handles vscrollPass.Scroll
+        vscrollAmount.Text = vscrollPass.Value
+    End Sub
+
+    Function validateVscrollPass(ByVal amount)
+        If amount = 54 Then
+            Return True
+        Else
+            Return False
+        End If
+    End Function
+
 End Class

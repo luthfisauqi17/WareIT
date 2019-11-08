@@ -114,4 +114,8 @@ Public Class ClientList
             MysqlConn.Dispose()
         End Try
     End Sub
+
+    Private Sub NewToolStripButton_Click(sender As Object, e As EventArgs) Handles NewToolStripButton.Click
+        ClientAdd.ShowDialog()
+    End Sub
 End Class

@@ -26,6 +26,9 @@ Partial Class Login
         Me.testConnectionBtn = New System.Windows.Forms.Button()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.vscrollAmount = New System.Windows.Forms.Label()
+        Me.vscrollPass = New System.Windows.Forms.VScrollBar()
         Me.loginBtn = New System.Windows.Forms.Button()
         Me.passwordTextBox = New System.Windows.Forms.TextBox()
         Me.usernameTextBox = New System.Windows.Forms.TextBox()
@@ -37,7 +40,7 @@ Partial Class Login
         '
         'testConnectionBtn
         '
-        Me.testConnectionBtn.Location = New System.Drawing.Point(337, 218)
+        Me.testConnectionBtn.Location = New System.Drawing.Point(337, 325)
         Me.testConnectionBtn.Name = "testConnectionBtn"
         Me.testConnectionBtn.Size = New System.Drawing.Size(155, 44)
         Me.testConnectionBtn.TabIndex = 0
@@ -56,6 +59,10 @@ Partial Class Login
         '
         'GroupBox1
         '
+        Me.GroupBox1.BackColor = System.Drawing.SystemColors.ControlLight
+        Me.GroupBox1.Controls.Add(Me.Label3)
+        Me.GroupBox1.Controls.Add(Me.vscrollAmount)
+        Me.GroupBox1.Controls.Add(Me.vscrollPass)
         Me.GroupBox1.Controls.Add(Me.loginBtn)
         Me.GroupBox1.Controls.Add(Me.passwordTextBox)
         Me.GroupBox1.Controls.Add(Me.PictureBox1)
@@ -64,13 +71,38 @@ Partial Class Login
         Me.GroupBox1.Controls.Add(Me.Label1)
         Me.GroupBox1.Location = New System.Drawing.Point(12, 12)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(480, 200)
+        Me.GroupBox1.Size = New System.Drawing.Size(480, 298)
         Me.GroupBox1.TabIndex = 2
         Me.GroupBox1.TabStop = False
         '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Location = New System.Drawing.Point(167, 139)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(121, 17)
+        Me.Label3.TabIndex = 7
+        Me.Label3.Text = "VScroll Password:"
+        '
+        'vscrollAmount
+        '
+        Me.vscrollAmount.AutoSize = True
+        Me.vscrollAmount.Location = New System.Drawing.Point(327, 139)
+        Me.vscrollAmount.Name = "vscrollAmount"
+        Me.vscrollAmount.Size = New System.Drawing.Size(16, 17)
+        Me.vscrollAmount.TabIndex = 6
+        Me.vscrollAmount.Text = "0"
+        '
+        'vscrollPass
+        '
+        Me.vscrollPass.Location = New System.Drawing.Point(346, 117)
+        Me.vscrollPass.Name = "vscrollPass"
+        Me.vscrollPass.Size = New System.Drawing.Size(21, 161)
+        Me.vscrollPass.TabIndex = 5
+        '
         'loginBtn
         '
-        Me.loginBtn.Location = New System.Drawing.Point(250, 123)
+        Me.loginBtn.Location = New System.Drawing.Point(28, 193)
         Me.loginBtn.Name = "loginBtn"
         Me.loginBtn.Size = New System.Drawing.Size(93, 33)
         Me.loginBtn.TabIndex = 4
@@ -114,7 +146,8 @@ Partial Class Login
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(499, 269)
+        Me.BackColor = System.Drawing.SystemColors.Menu
+        Me.ClientSize = New System.Drawing.Size(499, 378)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.testConnectionBtn)
         Me.Name = "Login"
@@ -134,4 +167,7 @@ Partial Class Login
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
     Friend WithEvents loginBtn As Button
+    Friend WithEvents Label3 As Label
+    Friend WithEvents vscrollAmount As Label
+    Friend WithEvents vscrollPass As VScrollBar
 End Class

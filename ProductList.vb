@@ -115,4 +115,8 @@ Public Class ProductList
             MysqlConn.Dispose()
         End Try
     End Sub
+
+    Private Sub NewToolStripButton_Click(sender As Object, e As EventArgs) Handles NewToolStripButton.Click
+        ProductAdd.ShowDialog()
+    End Sub
 End Class

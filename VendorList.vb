@@ -113,4 +113,8 @@ Public Class VendorList
             MysqlConn.Dispose()
         End Try
     End Sub
+
+    Private Sub NewToolStripButton_Click(sender As Object, e As EventArgs) Handles NewToolStripButton.Click
+        VendorAdd.ShowDialog()
+    End Sub
 End Class

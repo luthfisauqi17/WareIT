@@ -46,9 +46,9 @@ Partial Class TransactionList
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
+        Me.loadChartBtn = New System.Windows.Forms.Button()
         Me.Chart1 = New System.Windows.Forms.DataVisualization.Charting.Chart()
         Me.Splitter1 = New System.Windows.Forms.Splitter()
-        Me.loadChartBtn = New System.Windows.Forms.Button()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.StatusStrip1.SuspendLayout()
@@ -215,6 +215,16 @@ Partial Class TransactionList
         Me.TabPage2.Text = "Statistics"
         Me.TabPage2.UseVisualStyleBackColor = True
         '
+        'loadChartBtn
+        '
+        Me.loadChartBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.loadChartBtn.Location = New System.Drawing.Point(29, 39)
+        Me.loadChartBtn.Name = "loadChartBtn"
+        Me.loadChartBtn.Size = New System.Drawing.Size(320, 65)
+        Me.loadChartBtn.TabIndex = 2
+        Me.loadChartBtn.Text = "Load Chart"
+        Me.loadChartBtn.UseVisualStyleBackColor = True
+        '
         'Chart1
         '
         ChartArea1.Name = "ChartArea1"
@@ -237,16 +247,6 @@ Partial Class TransactionList
         Me.Splitter1.Size = New System.Drawing.Size(376, 583)
         Me.Splitter1.TabIndex = 0
         Me.Splitter1.TabStop = False
-        '
-        'loadChartBtn
-        '
-        Me.loadChartBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.loadChartBtn.Location = New System.Drawing.Point(29, 39)
-        Me.loadChartBtn.Name = "loadChartBtn"
-        Me.loadChartBtn.Size = New System.Drawing.Size(320, 65)
-        Me.loadChartBtn.TabIndex = 2
-        Me.loadChartBtn.Text = "Load Chart"
-        Me.loadChartBtn.UseVisualStyleBackColor = True
         '
         'TransactionList
         '
