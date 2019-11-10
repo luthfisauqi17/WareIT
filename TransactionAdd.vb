@@ -33,6 +33,12 @@ Public Class TransactionAdd
             COMMAND = New MySqlCommand(Query, MysqlConn)
             READER = COMMAND.ExecuteReader
             MessageBox.Show("Data Inserted Successfully")
+            If generateReportCheckBox.Checked = True Then
+                Dim reportString = "Date: " + Convert.ToString(transactionDatePicker.Text) + Constants.vbCrLf + "Client No: " + Convert.ToString(client_no) + Constants.vbCrLf + "PO Number: " + Convert.ToString(poNumberTextBox.Text) + Constants.vbCrLf +
+                                "Notes: " + Convert.ToString(notesTextBox.Text) + Constants.vbCrLf + "Product Id: " + Convert.ToString(productIdComboBox.Text) + Constants.vbCrLf + "Transaction Quantity: " + Convert.ToString(trans_qty) + Constants.vbCrLf +
+                                "Total Price: " + Convert.ToString(tot_price) + Constants.vbCrLf + "Quantity Type: " + Convert.ToString(type) + Constants.vbCrLf
+                MessageBox.Show(reportString)
+            End If
             MysqlConn.Close()
         Catch ex As Exception
             MessageBox.Show(ex.Message)
@@ -192,7 +198,7 @@ Public Class TransactionAdd
             proceedBtn.Enabled = False
         Else
             MsgBox("Valid Quantity")
-            tot_price = trans_qty * prod_price
+            tot_price = totalPriceCalculator(trans_qty, prod_price)
             totalPriceLabel.Text = tot_price
             proceedBtn.Enabled = True
         End If
@@ -200,6 +206,14 @@ Public Class TransactionAdd
         selectedItemLabel.Text = trans_qty
 
     End Sub
+
+    Function totalPriceCalculator(ByVal qty As Int16, ByVal price As Double)
+        Dim tax As Double
+        Dim total_price As Double
+        tax = (qty * price * 0.1)
+        total_price = tax + (qty * price)
+        Return total_price
+    End Function
 
 
     Private Sub ProductInRb_CheckedChanged(sender As Object, e As EventArgs)

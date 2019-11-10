@@ -22,7 +22,11 @@ Partial Class TransactionAdd
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
+        Me.selectedItemLabel = New System.Windows.Forms.Label()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.clrBtn = New System.Windows.Forms.Button()
         Me.totPriceGroupBox = New System.Windows.Forms.GroupBox()
         Me.totalPriceLabel = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
@@ -47,9 +51,7 @@ Partial Class TransactionAdd
         Me.Label2 = New System.Windows.Forms.Label()
         Me.transactionDatePicker = New System.Windows.Forms.DateTimePicker()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.clrBtn = New System.Windows.Forms.Button()
-        Me.Label9 = New System.Windows.Forms.Label()
-        Me.selectedItemLabel = New System.Windows.Forms.Label()
+        Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
         Me.GroupBox3.SuspendLayout()
         Me.totPriceGroupBox.SuspendLayout()
         Me.customQtyGroupBox.SuspendLayout()
@@ -83,6 +85,34 @@ Partial Class TransactionAdd
         Me.GroupBox3.Size = New System.Drawing.Size(868, 511)
         Me.GroupBox3.TabIndex = 14
         Me.GroupBox3.TabStop = False
+        '
+        'selectedItemLabel
+        '
+        Me.selectedItemLabel.AutoSize = True
+        Me.selectedItemLabel.Location = New System.Drawing.Point(621, 206)
+        Me.selectedItemLabel.Name = "selectedItemLabel"
+        Me.selectedItemLabel.Size = New System.Drawing.Size(13, 17)
+        Me.selectedItemLabel.TabIndex = 38
+        Me.selectedItemLabel.Text = "-"
+        '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.Location = New System.Drawing.Point(511, 206)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(104, 17)
+        Me.Label9.TabIndex = 37
+        Me.Label9.Text = "Selected items:"
+        '
+        'clrBtn
+        '
+        Me.clrBtn.Location = New System.Drawing.Point(303, 244)
+        Me.clrBtn.Name = "clrBtn"
+        Me.clrBtn.Size = New System.Drawing.Size(130, 33)
+        Me.clrBtn.TabIndex = 36
+        Me.clrBtn.Text = "Clear Items"
+        Me.ToolTip1.SetToolTip(Me.clrBtn, "Clear Items")
+        Me.clrBtn.UseVisualStyleBackColor = True
         '
         'totPriceGroupBox
         '
@@ -121,6 +151,7 @@ Partial Class TransactionAdd
         Me.availabilityCheckBtn.Size = New System.Drawing.Size(130, 54)
         Me.availabilityCheckBtn.TabIndex = 34
         Me.availabilityCheckBtn.Text = "Check Availability"
+        Me.ToolTip1.SetToolTip(Me.availabilityCheckBtn, "Check Item Availability")
         Me.availabilityCheckBtn.UseVisualStyleBackColor = True
         '
         'customQtyRb
@@ -196,6 +227,7 @@ Partial Class TransactionAdd
         Me.generateReportCheckBox.Size = New System.Drawing.Size(137, 21)
         Me.generateReportCheckBox.TabIndex = 14
         Me.generateReportCheckBox.Text = "Generate Report"
+        Me.ToolTip1.SetToolTip(Me.generateReportCheckBox, "Check if you need the information")
         Me.generateReportCheckBox.UseVisualStyleBackColor = True
         '
         'proceedBtn
@@ -205,6 +237,7 @@ Partial Class TransactionAdd
         Me.proceedBtn.Size = New System.Drawing.Size(227, 65)
         Me.proceedBtn.TabIndex = 27
         Me.proceedBtn.Text = "Proceed"
+        Me.ToolTip1.SetToolTip(Me.proceedBtn, "Proceed Transaction")
         Me.proceedBtn.UseVisualStyleBackColor = True
         '
         'notesTextBox
@@ -305,33 +338,6 @@ Partial Class TransactionAdd
         Me.Label1.TabIndex = 16
         Me.Label1.Text = "Transaction Date:"
         '
-        'clrBtn
-        '
-        Me.clrBtn.Location = New System.Drawing.Point(303, 244)
-        Me.clrBtn.Name = "clrBtn"
-        Me.clrBtn.Size = New System.Drawing.Size(130, 33)
-        Me.clrBtn.TabIndex = 36
-        Me.clrBtn.Text = "Clear Items"
-        Me.clrBtn.UseVisualStyleBackColor = True
-        '
-        'Label9
-        '
-        Me.Label9.AutoSize = True
-        Me.Label9.Location = New System.Drawing.Point(511, 206)
-        Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(104, 17)
-        Me.Label9.TabIndex = 37
-        Me.Label9.Text = "Selected items:"
-        '
-        'selectedItemLabel
-        '
-        Me.selectedItemLabel.AutoSize = True
-        Me.selectedItemLabel.Location = New System.Drawing.Point(621, 206)
-        Me.selectedItemLabel.Name = "selectedItemLabel"
-        Me.selectedItemLabel.Size = New System.Drawing.Size(13, 17)
-        Me.selectedItemLabel.TabIndex = 38
-        Me.selectedItemLabel.Text = "-"
-        '
         'TransactionAdd
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -382,4 +388,5 @@ Partial Class TransactionAdd
     Friend WithEvents clrBtn As Button
     Friend WithEvents selectedItemLabel As Label
     Friend WithEvents Label9 As Label
+    Friend WithEvents ToolTip1 As ToolTip
 End Class

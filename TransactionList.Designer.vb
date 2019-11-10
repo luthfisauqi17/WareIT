@@ -22,9 +22,10 @@ Partial Class TransactionList
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim ChartArea1 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
-        Dim Legend1 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
-        Dim Series1 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
+        Me.components = New System.ComponentModel.Container()
+        Dim ChartArea3 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
+        Dim Legend3 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
+        Dim Series3 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
         Me.StatusStrip1 = New System.Windows.Forms.StatusStrip()
@@ -42,17 +43,14 @@ Partial Class TransactionList
         Me.Button3 = New System.Windows.Forms.Button()
         Me.refreshTransactionBtn = New System.Windows.Forms.Button()
         Me.loadTransactionBtn = New System.Windows.Forms.Button()
-        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.Label1 = New System.Windows.Forms.Label()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
         Me.loadChartBtn = New System.Windows.Forms.Button()
         Me.Chart1 = New System.Windows.Forms.DataVisualization.Charting.Chart()
         Me.Splitter1 = New System.Windows.Forms.Splitter()
+        Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.StatusStrip1.SuspendLayout()
-        Me.GroupBox1.SuspendLayout()
         Me.TabPage2.SuspendLayout()
         CType(Me.Chart1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -74,7 +72,6 @@ Partial Class TransactionList
         Me.TabPage1.Controls.Add(Me.Button3)
         Me.TabPage1.Controls.Add(Me.refreshTransactionBtn)
         Me.TabPage1.Controls.Add(Me.loadTransactionBtn)
-        Me.TabPage1.Controls.Add(Me.GroupBox1)
         Me.TabPage1.Location = New System.Drawing.Point(4, 25)
         Me.TabPage1.Name = "TabPage1"
         Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
@@ -105,9 +102,9 @@ Partial Class TransactionList
         Me.transactionListView.FullRowSelect = True
         Me.transactionListView.GridLines = True
         Me.transactionListView.HideSelection = False
-        Me.transactionListView.Location = New System.Drawing.Point(7, 121)
+        Me.transactionListView.Location = New System.Drawing.Point(7, 74)
         Me.transactionListView.Name = "transactionListView"
-        Me.transactionListView.Size = New System.Drawing.Size(1096, 433)
+        Me.transactionListView.Size = New System.Drawing.Size(1096, 480)
         Me.transactionListView.TabIndex = 6
         Me.transactionListView.UseCompatibleStateImageBehavior = False
         Me.transactionListView.View = System.Windows.Forms.View.Details
@@ -155,52 +152,28 @@ Partial Class TransactionList
         Me.Button3.Size = New System.Drawing.Size(176, 50)
         Me.Button3.TabIndex = 5
         Me.Button3.Text = "Add New Transaction"
+        Me.ToolTip1.SetToolTip(Me.Button3, "Add New Transaction")
         Me.Button3.UseVisualStyleBackColor = True
         '
         'refreshTransactionBtn
         '
-        Me.refreshTransactionBtn.Location = New System.Drawing.Point(579, 63)
+        Me.refreshTransactionBtn.Location = New System.Drawing.Point(189, 6)
         Me.refreshTransactionBtn.Name = "refreshTransactionBtn"
         Me.refreshTransactionBtn.Size = New System.Drawing.Size(176, 50)
         Me.refreshTransactionBtn.TabIndex = 4
         Me.refreshTransactionBtn.Text = "Refresh"
+        Me.ToolTip1.SetToolTip(Me.refreshTransactionBtn, "Refresh Table")
         Me.refreshTransactionBtn.UseVisualStyleBackColor = True
         '
         'loadTransactionBtn
         '
-        Me.loadTransactionBtn.Location = New System.Drawing.Point(579, 7)
+        Me.loadTransactionBtn.Location = New System.Drawing.Point(7, 7)
         Me.loadTransactionBtn.Name = "loadTransactionBtn"
         Me.loadTransactionBtn.Size = New System.Drawing.Size(176, 50)
         Me.loadTransactionBtn.TabIndex = 3
         Me.loadTransactionBtn.Text = "Load Table"
+        Me.ToolTip1.SetToolTip(Me.loadTransactionBtn, "Load Table")
         Me.loadTransactionBtn.UseVisualStyleBackColor = True
-        '
-        'GroupBox1
-        '
-        Me.GroupBox1.Controls.Add(Me.TextBox1)
-        Me.GroupBox1.Controls.Add(Me.Label1)
-        Me.GroupBox1.Location = New System.Drawing.Point(7, 6)
-        Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(565, 109)
-        Me.GroupBox1.TabIndex = 2
-        Me.GroupBox1.TabStop = False
-        Me.GroupBox1.Text = "Search"
-        '
-        'TextBox1
-        '
-        Me.TextBox1.Location = New System.Drawing.Point(97, 29)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(242, 22)
-        Me.TextBox1.TabIndex = 3
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(14, 29)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(73, 17)
-        Me.Label1.TabIndex = 2
-        Me.Label1.Text = "Vendor Id:"
         '
         'TabPage2
         '
@@ -223,20 +196,21 @@ Partial Class TransactionList
         Me.loadChartBtn.Size = New System.Drawing.Size(320, 65)
         Me.loadChartBtn.TabIndex = 2
         Me.loadChartBtn.Text = "Load Chart"
+        Me.ToolTip1.SetToolTip(Me.loadChartBtn, "Load Chart")
         Me.loadChartBtn.UseVisualStyleBackColor = True
         '
         'Chart1
         '
-        ChartArea1.Name = "ChartArea1"
-        Me.Chart1.ChartAreas.Add(ChartArea1)
-        Legend1.Name = "Legend1"
-        Me.Chart1.Legends.Add(Legend1)
+        ChartArea3.Name = "ChartArea1"
+        Me.Chart1.ChartAreas.Add(ChartArea3)
+        Legend3.Name = "Legend1"
+        Me.Chart1.Legends.Add(Legend3)
         Me.Chart1.Location = New System.Drawing.Point(385, 6)
         Me.Chart1.Name = "Chart1"
-        Series1.ChartArea = "ChartArea1"
-        Series1.Legend = "Legend1"
-        Series1.Name = "PRODUCT_VS_SOLD"
-        Me.Chart1.Series.Add(Series1)
+        Series3.ChartArea = "ChartArea1"
+        Series3.Legend = "Legend1"
+        Series3.Name = "PRODUCT_VS_SOLD"
+        Me.Chart1.Series.Add(Series3)
         Me.Chart1.Size = New System.Drawing.Size(718, 577)
         Me.Chart1.TabIndex = 1
         '
@@ -261,8 +235,6 @@ Partial Class TransactionList
         Me.TabPage1.PerformLayout()
         Me.StatusStrip1.ResumeLayout(False)
         Me.StatusStrip1.PerformLayout()
-        Me.GroupBox1.ResumeLayout(False)
-        Me.GroupBox1.PerformLayout()
         Me.TabPage2.ResumeLayout(False)
         CType(Me.Chart1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
@@ -274,14 +246,11 @@ Partial Class TransactionList
     Friend WithEvents Button3 As Button
     Friend WithEvents refreshTransactionBtn As Button
     Friend WithEvents loadTransactionBtn As Button
-    Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents TabPage2 As TabPage
     Friend WithEvents Splitter1 As Splitter
     Friend WithEvents transactionListView As ListView
     Friend WithEvents StatusStrip1 As StatusStrip
     Friend WithEvents ToolStripProgressBar1 As ToolStripProgressBar
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents Label1 As Label
     Friend WithEvents ColumnHeader1 As ColumnHeader
     Friend WithEvents ColumnHeader2 As ColumnHeader
     Friend WithEvents ColumnHeader3 As ColumnHeader
@@ -293,4 +262,5 @@ Partial Class TransactionList
     Friend WithEvents ColumnHeader9 As ColumnHeader
     Friend WithEvents Chart1 As DataVisualization.Charting.Chart
     Friend WithEvents loadChartBtn As Button
+    Friend WithEvents ToolTip1 As ToolTip
 End Class

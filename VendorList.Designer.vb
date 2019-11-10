@@ -22,6 +22,7 @@ Partial Class VendorList
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(VendorList))
         Me.toAddNewVendorBtn = New System.Windows.Forms.Button()
         Me.loadVendorListBtn = New System.Windows.Forms.Button()
@@ -38,6 +39,7 @@ Partial Class VendorList
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.updateBtn = New System.Windows.Forms.Button()
+        Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
         CType(Me.VendorListDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.ToolStrip1.SuspendLayout()
         Me.StatusStrip1.SuspendLayout()
@@ -51,6 +53,7 @@ Partial Class VendorList
         Me.toAddNewVendorBtn.Size = New System.Drawing.Size(127, 44)
         Me.toAddNewVendorBtn.TabIndex = 10
         Me.toAddNewVendorBtn.Text = "Add New Vendor"
+        Me.ToolTip1.SetToolTip(Me.toAddNewVendorBtn, "Add New Vendor")
         Me.toAddNewVendorBtn.UseVisualStyleBackColor = True
         '
         'loadVendorListBtn
@@ -60,6 +63,7 @@ Partial Class VendorList
         Me.loadVendorListBtn.Size = New System.Drawing.Size(127, 44)
         Me.loadVendorListBtn.TabIndex = 8
         Me.loadVendorListBtn.Text = "Load Table"
+        Me.ToolTip1.SetToolTip(Me.loadVendorListBtn, "Load Table")
         Me.loadVendorListBtn.UseVisualStyleBackColor = True
         '
         'refreshVendorListBtn
@@ -69,6 +73,7 @@ Partial Class VendorList
         Me.refreshVendorListBtn.Size = New System.Drawing.Size(127, 44)
         Me.refreshVendorListBtn.TabIndex = 7
         Me.refreshVendorListBtn.Text = "Refresh Table"
+        Me.ToolTip1.SetToolTip(Me.refreshVendorListBtn, "Refresh Table")
         Me.refreshVendorListBtn.UseVisualStyleBackColor = True
         '
         'VendorListDataGridView
@@ -139,6 +144,7 @@ Partial Class VendorList
         Me.deleteBtn.Size = New System.Drawing.Size(281, 64)
         Me.deleteBtn.TabIndex = 7
         Me.deleteBtn.Text = "Delete Data"
+        Me.ToolTip1.SetToolTip(Me.deleteBtn, "Delete Data")
         Me.deleteBtn.UseVisualStyleBackColor = True
         '
         'updateVendorName
@@ -183,6 +189,7 @@ Partial Class VendorList
         Me.updateBtn.Size = New System.Drawing.Size(281, 64)
         Me.updateBtn.TabIndex = 0
         Me.updateBtn.Text = "Update Data"
+        Me.ToolTip1.SetToolTip(Me.updateBtn, "Update Data")
         Me.updateBtn.UseVisualStyleBackColor = True
         '
         'VendorList
@@ -226,4 +233,5 @@ Partial Class VendorList
     Friend WithEvents Label2 As Label
     Friend WithEvents Label4 As Label
     Friend WithEvents updateBtn As Button
+    Friend WithEvents ToolTip1 As ToolTip
 End Class

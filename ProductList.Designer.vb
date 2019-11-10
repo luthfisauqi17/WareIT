@@ -67,6 +67,7 @@ Partial Class ProductList
         Me.refreshProductListBtn.Size = New System.Drawing.Size(127, 44)
         Me.refreshProductListBtn.TabIndex = 2
         Me.refreshProductListBtn.Text = "Refresh Table"
+        Me.ToolTip1.SetToolTip(Me.refreshProductListBtn, "Refresh Table")
         Me.refreshProductListBtn.UseVisualStyleBackColor = True
         '
         'loadProductListBtn
@@ -76,6 +77,7 @@ Partial Class ProductList
         Me.loadProductListBtn.Size = New System.Drawing.Size(127, 44)
         Me.loadProductListBtn.TabIndex = 3
         Me.loadProductListBtn.Text = "Load Table"
+        Me.ToolTip1.SetToolTip(Me.loadProductListBtn, "Load Table")
         Me.loadProductListBtn.UseVisualStyleBackColor = True
         '
         'toAddNewProductBtn
@@ -147,6 +149,7 @@ Partial Class ProductList
         Me.deleteProductBtn.Size = New System.Drawing.Size(281, 64)
         Me.deleteProductBtn.TabIndex = 7
         Me.deleteProductBtn.Text = "Delete Data"
+        Me.ToolTip1.SetToolTip(Me.deleteProductBtn, "Delete Data")
         Me.deleteProductBtn.UseVisualStyleBackColor = True
         '
         'updateProductName
@@ -155,6 +158,7 @@ Partial Class ProductList
         Me.updateProductName.Name = "updateProductName"
         Me.updateProductName.Size = New System.Drawing.Size(100, 22)
         Me.updateProductName.TabIndex = 6
+        Me.ToolTip1.SetToolTip(Me.updateProductName, "Fill in the Product Name")
         '
         'updateProductId
         '
@@ -162,6 +166,7 @@ Partial Class ProductList
         Me.updateProductId.Name = "updateProductId"
         Me.updateProductId.Size = New System.Drawing.Size(100, 22)
         Me.updateProductId.TabIndex = 5
+        Me.ToolTip1.SetToolTip(Me.updateProductId, "Fill in the Product Id")
         '
         'updateProductQty
         '
@@ -169,6 +174,7 @@ Partial Class ProductList
         Me.updateProductQty.Name = "updateProductQty"
         Me.updateProductQty.Size = New System.Drawing.Size(120, 22)
         Me.updateProductQty.TabIndex = 4
+        Me.ToolTip1.SetToolTip(Me.updateProductQty, "Fill in the product Quantity")
         '
         'Label3
         '
@@ -208,6 +214,7 @@ Partial Class ProductList
         Me.updateBtn.Size = New System.Drawing.Size(281, 64)
         Me.updateBtn.TabIndex = 0
         Me.updateBtn.Text = "Update Data"
+        Me.ToolTip1.SetToolTip(Me.updateBtn, "Update Data")
         Me.updateBtn.UseVisualStyleBackColor = True
         '
         'ProductList

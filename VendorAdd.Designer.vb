@@ -22,6 +22,7 @@ Partial Class VendorAdd
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.vendorAddressTextBox = New System.Windows.Forms.TextBox()
         Me.vendorPhoneTextBox = New System.Windows.Forms.TextBox()
@@ -36,6 +37,7 @@ Partial Class VendorAdd
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.addVendorBtn = New System.Windows.Forms.Button()
+        Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
         Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -163,6 +165,7 @@ Partial Class VendorAdd
         Me.addVendorBtn.Size = New System.Drawing.Size(161, 55)
         Me.addVendorBtn.TabIndex = 7
         Me.addVendorBtn.Text = "Insert Data"
+        Me.ToolTip1.SetToolTip(Me.addVendorBtn, "Insert Data")
         Me.addVendorBtn.UseVisualStyleBackColor = True
         '
         'VendorAdd
@@ -194,4 +197,5 @@ Partial Class VendorAdd
     Friend WithEvents vendorAddressTextBox As TextBox
     Friend WithEvents vendorPhoneTextBox As TextBox
     Friend WithEvents addVendorBtn As Button
+    Friend WithEvents ToolTip1 As ToolTip
 End Class

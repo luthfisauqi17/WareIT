@@ -63,6 +63,7 @@ Partial Class MainFrame
         Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
         Me.HelpToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.ViewHelpToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
         Me.MenuStrip1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.ContextMenuStrip1.SuspendLayout()
@@ -74,6 +75,7 @@ Partial Class MainFrame
         Me.ProductToolStripMenuItem.Name = "ProductToolStripMenuItem"
         Me.ProductToolStripMenuItem.Size = New System.Drawing.Size(80, 24)
         Me.ProductToolStripMenuItem.Text = "&Products"
+        Me.ProductToolStripMenuItem.ToolTipText = "Products Menu"
         '
         'ProductListToolStripMenuItem
         '
@@ -95,6 +97,7 @@ Partial Class MainFrame
         Me.VendorToolStripMenuItem.Name = "VendorToolStripMenuItem"
         Me.VendorToolStripMenuItem.Size = New System.Drawing.Size(76, 24)
         Me.VendorToolStripMenuItem.Text = "&Vendors"
+        Me.VendorToolStripMenuItem.ToolTipText = "Vendors Menu"
         '
         'VendorListToolStripMenuItem
         '
@@ -116,6 +119,7 @@ Partial Class MainFrame
         Me.ClientsToolStripMenuItem.Name = "ClientsToolStripMenuItem"
         Me.ClientsToolStripMenuItem.Size = New System.Drawing.Size(67, 24)
         Me.ClientsToolStripMenuItem.Text = "&Clients"
+        Me.ClientsToolStripMenuItem.ToolTipText = "Clients Menu"
         '
         'ClientListToolStripMenuItem
         '
@@ -137,6 +141,7 @@ Partial Class MainFrame
         Me.TransactionToolStripMenuItem.Name = "TransactionToolStripMenuItem"
         Me.TransactionToolStripMenuItem.Size = New System.Drawing.Size(98, 24)
         Me.TransactionToolStripMenuItem.Text = "&Transaction"
+        Me.TransactionToolStripMenuItem.ToolTipText = "Transaction Menu"
         '
         'TransactionHistoryToolStripMenuItem
         '
@@ -168,6 +173,7 @@ Partial Class MainFrame
         Me.HelpToolStripMenuItem.Name = "HelpToolStripMenuItem"
         Me.HelpToolStripMenuItem.Size = New System.Drawing.Size(55, 24)
         Me.HelpToolStripMenuItem.Text = "&Help"
+        Me.HelpToolStripMenuItem.ToolTipText = "Help Menu"
         '
         'ViewHelpToolStripMenuItem
         '
@@ -238,6 +244,7 @@ Partial Class MainFrame
         Me.signoutBtn.Size = New System.Drawing.Size(209, 43)
         Me.signoutBtn.TabIndex = 9
         Me.signoutBtn.Text = "Sign Out"
+        Me.ToolTip1.SetToolTip(Me.signoutBtn, "Sign Out")
         Me.signoutBtn.UseVisualStyleBackColor = True
         '
         'VScrollBar1
@@ -265,14 +272,14 @@ Partial Class MainFrame
         '
         Me.ProductListToolStripMenuItem1.Image = CType(resources.GetObject("ProductListToolStripMenuItem1.Image"), System.Drawing.Image)
         Me.ProductListToolStripMenuItem1.Name = "ProductListToolStripMenuItem1"
-        Me.ProductListToolStripMenuItem1.Size = New System.Drawing.Size(224, 26)
+        Me.ProductListToolStripMenuItem1.Size = New System.Drawing.Size(209, 26)
         Me.ProductListToolStripMenuItem1.Text = "Product &List"
         '
         'AddNewProductToolStripMenuItem1
         '
         Me.AddNewProductToolStripMenuItem1.Image = CType(resources.GetObject("AddNewProductToolStripMenuItem1.Image"), System.Drawing.Image)
         Me.AddNewProductToolStripMenuItem1.Name = "AddNewProductToolStripMenuItem1"
-        Me.AddNewProductToolStripMenuItem1.Size = New System.Drawing.Size(224, 26)
+        Me.AddNewProductToolStripMenuItem1.Size = New System.Drawing.Size(209, 26)
         Me.AddNewProductToolStripMenuItem1.Text = "Add &New Product"
         '
         'VendorsToolStripMenuItem
@@ -286,14 +293,14 @@ Partial Class MainFrame
         '
         Me.VendorListToolStripMenuItem1.Image = CType(resources.GetObject("VendorListToolStripMenuItem1.Image"), System.Drawing.Image)
         Me.VendorListToolStripMenuItem1.Name = "VendorListToolStripMenuItem1"
-        Me.VendorListToolStripMenuItem1.Size = New System.Drawing.Size(224, 26)
+        Me.VendorListToolStripMenuItem1.Size = New System.Drawing.Size(205, 26)
         Me.VendorListToolStripMenuItem1.Text = "Vendor &List"
         '
         'AddNewVendorToolStripMenuItem1
         '
         Me.AddNewVendorToolStripMenuItem1.Image = CType(resources.GetObject("AddNewVendorToolStripMenuItem1.Image"), System.Drawing.Image)
         Me.AddNewVendorToolStripMenuItem1.Name = "AddNewVendorToolStripMenuItem1"
-        Me.AddNewVendorToolStripMenuItem1.Size = New System.Drawing.Size(224, 26)
+        Me.AddNewVendorToolStripMenuItem1.Size = New System.Drawing.Size(205, 26)
         Me.AddNewVendorToolStripMenuItem1.Text = "Add &New Vendor"
         '
         'ClientsToolStripMenuItem1
@@ -307,14 +314,14 @@ Partial Class MainFrame
         '
         Me.ClientListToolStripMenuItem1.Image = CType(resources.GetObject("ClientListToolStripMenuItem1.Image"), System.Drawing.Image)
         Me.ClientListToolStripMenuItem1.Name = "ClientListToolStripMenuItem1"
-        Me.ClientListToolStripMenuItem1.Size = New System.Drawing.Size(224, 26)
+        Me.ClientListToolStripMenuItem1.Size = New System.Drawing.Size(196, 26)
         Me.ClientListToolStripMenuItem1.Text = "Client &List"
         '
         'AddNewClientToolStripMenuItem1
         '
         Me.AddNewClientToolStripMenuItem1.Image = CType(resources.GetObject("AddNewClientToolStripMenuItem1.Image"), System.Drawing.Image)
         Me.AddNewClientToolStripMenuItem1.Name = "AddNewClientToolStripMenuItem1"
-        Me.AddNewClientToolStripMenuItem1.Size = New System.Drawing.Size(224, 26)
+        Me.AddNewClientToolStripMenuItem1.Size = New System.Drawing.Size(196, 26)
         Me.AddNewClientToolStripMenuItem1.Text = "Add &New Client"
         '
         'TransactionToolStripMenuItem1
@@ -354,7 +361,7 @@ Partial Class MainFrame
         '
         Me.ViewHelpToolStripMenuItem1.Image = CType(resources.GetObject("ViewHelpToolStripMenuItem1.Image"), System.Drawing.Image)
         Me.ViewHelpToolStripMenuItem1.Name = "ViewHelpToolStripMenuItem1"
-        Me.ViewHelpToolStripMenuItem1.Size = New System.Drawing.Size(224, 26)
+        Me.ViewHelpToolStripMenuItem1.Size = New System.Drawing.Size(160, 26)
         Me.ViewHelpToolStripMenuItem1.Text = "&View Help"
         '
         'MainFrame
@@ -423,4 +430,5 @@ Partial Class MainFrame
     Friend WithEvents ToolStripSeparator1 As ToolStripSeparator
     Friend WithEvents HelpToolStripMenuItem1 As ToolStripMenuItem
     Friend WithEvents ViewHelpToolStripMenuItem1 As ToolStripMenuItem
+    Friend WithEvents ToolTip1 As ToolTip
 End Class

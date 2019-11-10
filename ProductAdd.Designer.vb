@@ -22,18 +22,20 @@ Partial Class ProductAdd
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.productDescTextBox = New System.Windows.Forms.TextBox()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.addProductBtn = New System.Windows.Forms.Button()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.productNameTextBox = New System.Windows.Forms.TextBox()
-        Me.productBuyRateMaskTextBox = New System.Windows.Forms.MaskedTextBox()
-        Me.Label6 = New System.Windows.Forms.Label()
         Me.vendorComboBox = New System.Windows.Forms.ComboBox()
-        Me.Label1 = New System.Windows.Forms.Label()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.productDescTextBox = New System.Windows.Forms.TextBox()
+        Me.productBuyRateMaskTextBox = New System.Windows.Forms.MaskedTextBox()
         Me.productIdTextBox = New System.Windows.Forms.TextBox()
+        Me.productNameTextBox = New System.Windows.Forms.TextBox()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.addProductBtn = New System.Windows.Forms.Button()
+        Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
         Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -55,63 +57,13 @@ Partial Class ProductAdd
         Me.GroupBox1.TabIndex = 0
         Me.GroupBox1.TabStop = False
         '
-        'productDescTextBox
+        'vendorComboBox
         '
-        Me.productDescTextBox.Location = New System.Drawing.Point(10, 253)
-        Me.productDescTextBox.Multiline = True
-        Me.productDescTextBox.Name = "productDescTextBox"
-        Me.productDescTextBox.Size = New System.Drawing.Size(442, 155)
-        Me.productDescTextBox.TabIndex = 9
-        '
-        'Label5
-        '
-        Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(7, 233)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(83, 17)
-        Me.Label5.TabIndex = 4
-        Me.Label5.Text = "Description:"
-        '
-        'addProductBtn
-        '
-        Me.addProductBtn.Location = New System.Drawing.Point(22, 449)
-        Me.addProductBtn.Name = "addProductBtn"
-        Me.addProductBtn.Size = New System.Drawing.Size(161, 55)
-        Me.addProductBtn.TabIndex = 1
-        Me.addProductBtn.Text = "Insert Data"
-        Me.addProductBtn.UseVisualStyleBackColor = True
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(7, 61)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(102, 17)
-        Me.Label2.TabIndex = 1
-        Me.Label2.Text = "Product Name:"
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(7, 149)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(70, 17)
-        Me.Label3.TabIndex = 2
-        Me.Label3.Text = "Buy Rate:"
-        '
-        'productNameTextBox
-        '
-        Me.productNameTextBox.Location = New System.Drawing.Point(116, 61)
-        Me.productNameTextBox.Name = "productNameTextBox"
-        Me.productNameTextBox.Size = New System.Drawing.Size(247, 22)
-        Me.productNameTextBox.TabIndex = 5
-        '
-        'productBuyRateMaskTextBox
-        '
-        Me.productBuyRateMaskTextBox.Location = New System.Drawing.Point(116, 149)
-        Me.productBuyRateMaskTextBox.Name = "productBuyRateMaskTextBox"
-        Me.productBuyRateMaskTextBox.Size = New System.Drawing.Size(117, 22)
-        Me.productBuyRateMaskTextBox.TabIndex = 7
+        Me.vendorComboBox.FormattingEnabled = True
+        Me.vendorComboBox.Location = New System.Drawing.Point(116, 107)
+        Me.vendorComboBox.Name = "vendorComboBox"
+        Me.vendorComboBox.Size = New System.Drawing.Size(121, 24)
+        Me.vendorComboBox.TabIndex = 11
         '
         'Label6
         '
@@ -122,13 +74,61 @@ Partial Class ProductAdd
         Me.Label6.TabIndex = 10
         Me.Label6.Text = "Vendor:"
         '
-        'vendorComboBox
+        'productDescTextBox
         '
-        Me.vendorComboBox.FormattingEnabled = True
-        Me.vendorComboBox.Location = New System.Drawing.Point(116, 107)
-        Me.vendorComboBox.Name = "vendorComboBox"
-        Me.vendorComboBox.Size = New System.Drawing.Size(121, 24)
-        Me.vendorComboBox.TabIndex = 11
+        Me.productDescTextBox.Location = New System.Drawing.Point(10, 253)
+        Me.productDescTextBox.Multiline = True
+        Me.productDescTextBox.Name = "productDescTextBox"
+        Me.productDescTextBox.Size = New System.Drawing.Size(442, 155)
+        Me.productDescTextBox.TabIndex = 9
+        '
+        'productBuyRateMaskTextBox
+        '
+        Me.productBuyRateMaskTextBox.Location = New System.Drawing.Point(116, 149)
+        Me.productBuyRateMaskTextBox.Name = "productBuyRateMaskTextBox"
+        Me.productBuyRateMaskTextBox.Size = New System.Drawing.Size(117, 22)
+        Me.productBuyRateMaskTextBox.TabIndex = 7
+        '
+        'productIdTextBox
+        '
+        Me.productIdTextBox.Location = New System.Drawing.Point(116, 22)
+        Me.productIdTextBox.Name = "productIdTextBox"
+        Me.productIdTextBox.Size = New System.Drawing.Size(247, 22)
+        Me.productIdTextBox.TabIndex = 6
+        '
+        'productNameTextBox
+        '
+        Me.productNameTextBox.Location = New System.Drawing.Point(116, 61)
+        Me.productNameTextBox.Name = "productNameTextBox"
+        Me.productNameTextBox.Size = New System.Drawing.Size(247, 22)
+        Me.productNameTextBox.TabIndex = 5
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Location = New System.Drawing.Point(7, 233)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(83, 17)
+        Me.Label5.TabIndex = 4
+        Me.Label5.Text = "Description:"
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Location = New System.Drawing.Point(7, 149)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(70, 17)
+        Me.Label3.TabIndex = 2
+        Me.Label3.Text = "Buy Rate:"
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(7, 61)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(102, 17)
+        Me.Label2.TabIndex = 1
+        Me.Label2.Text = "Product Name:"
         '
         'Label1
         '
@@ -139,12 +139,15 @@ Partial Class ProductAdd
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Product Id:"
         '
-        'productIdTextBox
+        'addProductBtn
         '
-        Me.productIdTextBox.Location = New System.Drawing.Point(116, 22)
-        Me.productIdTextBox.Name = "productIdTextBox"
-        Me.productIdTextBox.Size = New System.Drawing.Size(247, 22)
-        Me.productIdTextBox.TabIndex = 6
+        Me.addProductBtn.Location = New System.Drawing.Point(22, 449)
+        Me.addProductBtn.Name = "addProductBtn"
+        Me.addProductBtn.Size = New System.Drawing.Size(161, 55)
+        Me.addProductBtn.TabIndex = 1
+        Me.addProductBtn.Text = "Insert Data"
+        Me.ToolTip1.SetToolTip(Me.addProductBtn, "Insert Data")
+        Me.addProductBtn.UseVisualStyleBackColor = True
         '
         'ProductAdd
         '
@@ -173,4 +176,5 @@ Partial Class ProductAdd
     Friend WithEvents Label2 As Label
     Friend WithEvents productIdTextBox As TextBox
     Friend WithEvents Label1 As Label
+    Friend WithEvents ToolTip1 As ToolTip
 End Class

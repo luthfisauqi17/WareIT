@@ -22,6 +22,7 @@ Partial Class ClientAdd
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.clientPhoneTextBox = New System.Windows.Forms.TextBox()
         Me.clientEmailTextBox = New System.Windows.Forms.TextBox()
@@ -34,6 +35,7 @@ Partial Class ClientAdd
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.addClientBtn = New System.Windows.Forms.Button()
+        Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
         Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -143,6 +145,7 @@ Partial Class ClientAdd
         Me.addClientBtn.Size = New System.Drawing.Size(161, 55)
         Me.addClientBtn.TabIndex = 11
         Me.addClientBtn.Text = "Insert Data"
+        Me.ToolTip1.SetToolTip(Me.addClientBtn, "Insert Data")
         Me.addClientBtn.UseVisualStyleBackColor = True
         '
         'ClientAdd
@@ -172,4 +175,5 @@ Partial Class ClientAdd
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
     Friend WithEvents addClientBtn As Button
+    Friend WithEvents ToolTip1 As ToolTip
 End Class

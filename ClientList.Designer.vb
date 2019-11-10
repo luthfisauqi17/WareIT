@@ -40,6 +40,7 @@ Partial Class ClientList
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.updateBtn = New System.Windows.Forms.Button()
+        Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
         CType(Me.VendorListDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.ToolStrip1.SuspendLayout()
         Me.StatusStrip1.SuspendLayout()
@@ -62,6 +63,7 @@ Partial Class ClientList
         Me.loadClientListBtn.Size = New System.Drawing.Size(127, 44)
         Me.loadClientListBtn.TabIndex = 14
         Me.loadClientListBtn.Text = "Load Table"
+        Me.ToolTip1.SetToolTip(Me.loadClientListBtn, "Load Table")
         Me.loadClientListBtn.UseVisualStyleBackColor = True
         '
         'refreshClientListBtn
@@ -71,6 +73,7 @@ Partial Class ClientList
         Me.refreshClientListBtn.Size = New System.Drawing.Size(127, 44)
         Me.refreshClientListBtn.TabIndex = 13
         Me.refreshClientListBtn.Text = "Refresh Table"
+        Me.ToolTip1.SetToolTip(Me.refreshClientListBtn, "Refresh Table")
         Me.refreshClientListBtn.UseVisualStyleBackColor = True
         '
         'VendorListDataGridView
@@ -101,6 +104,7 @@ Partial Class ClientList
         Me.toAddNewClientBtn.Size = New System.Drawing.Size(127, 44)
         Me.toAddNewClientBtn.TabIndex = 16
         Me.toAddNewClientBtn.Text = "Add New Client"
+        Me.ToolTip1.SetToolTip(Me.toAddNewClientBtn, "Add New Client")
         Me.toAddNewClientBtn.UseVisualStyleBackColor = True
         '
         'StatusStrip1
@@ -141,6 +145,7 @@ Partial Class ClientList
         Me.deleteBtn.Size = New System.Drawing.Size(281, 64)
         Me.deleteBtn.TabIndex = 7
         Me.deleteBtn.Text = "Delete Data"
+        Me.ToolTip1.SetToolTip(Me.deleteBtn, "Delete Data")
         Me.deleteBtn.UseVisualStyleBackColor = True
         '
         'updateClientName
@@ -185,6 +190,7 @@ Partial Class ClientList
         Me.updateBtn.Size = New System.Drawing.Size(281, 64)
         Me.updateBtn.TabIndex = 0
         Me.updateBtn.Text = "Update Data"
+        Me.ToolTip1.SetToolTip(Me.updateBtn, "Update Data")
         Me.updateBtn.UseVisualStyleBackColor = True
         '
         'ClientList
@@ -228,4 +234,5 @@ Partial Class ClientList
     Friend WithEvents Label2 As Label
     Friend WithEvents Label4 As Label
     Friend WithEvents updateBtn As Button
+    Friend WithEvents ToolTip1 As ToolTip
 End Class
